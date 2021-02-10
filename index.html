@@ -17,7 +17,7 @@
       <div class="header__wrapper">
         <div class="header__row-top">
           <div class="header__logo">
-            <a href="img/logo.svg">#</a>
+            <a href="#"><img src=img/logo.svg alt="Логотип сайта"></a>
           </div>
           <div class="header__social social">
             <ul class="social__list">
@@ -47,7 +47,7 @@
   <section id="intro">
     <div class="container">
       <!-- область текст -->
-      <div class="intro__wrapper wrapper-left">
+      <div class="intro__info wrapper-left">
         <h1>Единый отдел продаж всех застройщиков Владивостока</h1>
         <p>White Development продает квартиры в новостройках напрямую от застройщиков по их ценам. Мы предлагаем каталог
           всех жилых комплексов Владивостока.</p>
@@ -58,13 +58,15 @@
           <a href="#apartment-parameters" class="intro__link parameters-link dark-link">Подобрать квартиру</a>
         </div>
       </div>
+      <div class="intro__chat"></div>
     </div>
   </section>
+
+  <!--  -->
   <section id="about">
     <div class="container">
-      <div class="about__wrapper wrapper-left">
-        <h2>Чем занимаемся</h2>
-        <b></b>
+      <div class="about__info wrapper-left">
+        <h2 about__title>Чем занимаемся</h2>
         <p>
           Мы <b>официальные представители</b> застройщиков Владивостока. <b>Продаём квартиры</b> в новостройках
           напрямую по ценам застройщиков. <b>Без комиссий и скрытых платежей</b>. В цену квартир уже заложен процент для
@@ -81,6 +83,8 @@
       <img class="about__image" src="img/phone-dialog.png" alt="Экран телефона с диалогом">
     </div>
   </section>
+
+  <!-- Каталог новостроек -->
   <section id="apartment-calalog">
     <div class="container">
       <div class="catalog__cards">
@@ -96,20 +100,93 @@
         </div>
       </div>
       <div class="catalog__desctiption">
-        <h2>Квартиры в новостройках для каждого</h2>
+        <h2 catalog__title>Квартиры в новостройках для каждого</h2>
         <p><b>Дешёвый, средний и премиум сегмент.</b></p>
         <p>Продаём квартиры для всех. Поможем подобрать квартиру мечты для молодых пар, семей с детьми, военнослужащих.
           Подберём студию с хорошим видом для одиночного проживания.</p>
         <p><b>Любые квартиры в новостройках Владивостока в одном месте.</b></p>
-        .
+        <div class="">
+          <a class="catalog__phone" href="tel:+74232605030">+7 (423) 260-50-30</a>
+          <a class="catalog__contacts" href="#">Контакты</a>
+        </div>
       </div>
     </div>
   </section>
-  <section id="advantages">
 
+  <!-- Преимущества -->
+  <section id="advantages">
+    <div class="container">
+      <!-- черный блок -->
+      <div class="advantages__wrapper">
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h3>Официальные представители банков</h3>
+            <p>Мы общаемся напрямую с руководителями ипотечных кредитов, что позволяет нам в короткий промежуток время
+              получить положительный ответ.</p>
+          </li>
+          <li class="advantages__item">
+            <h3>Почему мы не берём комиссию</h3>
+            <p>Действуем от имени застройщиков и являемся их официальными представителями. Мы не риелторы. У нас нет
+              скрытых платежей и комиссий.</p>
+          </li>
+          <li class="advantages__item">
+            <h3>Бесплатное бронирование</h3>
+            <p>Забронируем для вас квартиру абсолютно бесплатно и сохраним её стоимость до выхода на сделку.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
-  <section id="apartment-parameters"></section>
-  <section id="partners"></section>
+  <section id="apartment-parameters">
+    <div class="container">
+      <div class="apartment-parameters__info wrapper-left">
+        <h2 class="apartment-parameters__info apartment-parameters__title">Свыше 5740 квартир на выбор</h2>
+        <p>Все новостройки Владивостока. Более 5740 вариантов квартир под любой бюджет и запрос. Заполните поля справа,
+          чтобы узнать, какие квартиры могут идеально подойти вам.</p>
+        <a class="apartment-parameters__phone" href="tel:+74232605030">+7 (423) 260-50-30<span>Позвоните нам и мы всё
+            расскажем</span></a>
+      </div>
+      <!-- TODO заполнить атрибуты формы -->
+      <form action="" method="">
+        <!-- возможно, нужно использовать другой тэг -->
+        <legend>Подобрать квартиру</legend>
+        <fieldset>
+          <!-- TODO плейсхолдеры для селектов -->
+          <label class="visually-hidden" for="rooms">Количество комнат</label>
+          <select name="rooms" id="rooms"></select>
+          <label class="visually-hidden" for="area">Площадь</label>
+          <select name="area" id="area"></select>
+          <label class="visually-hidden" for="district">Район</label>
+          <select name="district" id="district"></select>
+          <label class="visually-hidden" for="period"></label>
+          <select name="period" id="period"></select>
+        </fieldset>
+        <fieldset>
+          <label class="visually-hidden" for="price">Стоимость</label>
+          <select name="price" id="price"></select>
+          <label class="visually-hidden" for="fullname">Ваше ФИО</label>
+          <input type="text" name="fullname" id="fullname">
+          <label class="visually-hidden" for="phone">Номер телефона</label>
+          <input type="tel" name="phone" id="phone">
+          <label class="visually-hidden" for="pay-method">Как будете платить?</label>
+          <select name="pay-method" id="pay-method"></select>
+        </fieldset>
+        <label for="consent">Даю согласие на обработку <a href="#">моих данных</a></label>
+        <input type="checkbox" name="consent" id="consent" checked>
+        <input type="submit" value="Подобрать">
+      </form>
+    </div>
+  </section>
+
+  <section id="banks">
+    <div class="container">
+      <img class="banks__image" src="img/phone-dialog.png" alt="Логотипы банков">
+      <div class="banks__info">
+        <h2 banks__title>Банки-партнёры</h2>
+
+      </div>
+    </div>
+  </section>
   <section id="developers"></section>
   <footer>
     <div class="container"></div>

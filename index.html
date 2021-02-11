@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>White Development</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -15,20 +15,28 @@
     <div class="container">
       <!-- белая панель -->
       <nav class="header-nav">
-        <div class="header__row-top">
+        <div class="header__row row-top">
           <div class="header__logo logo">
             <a href="#"><img src=img/logo.svg alt="Логотип сайта"></a>
           </div>
           <div class="header__social social">
             <ul class="social__list">
-              <li class="social__item instagram"><a class="social__link" href="#">Instagram</a></li>
-              <li class="social__item whatsapp"><a class="social__link" href="#">WhatsApp</a></li>
-              <li class="social__item telegram"><a class="social__link" href="#">Telegram</a></li>
-              <li class="social__item phone"><a class="social__link" href="tel:+74232919990">+7 (423) 291-99-90</a></li>
+              <li class="social__item instagram"><a class="social__link" href="#"><img
+                    src="img/instagram.svg">Instagram<span>Перейти в
+                    профиль</span>
+                </a></li>
+              <li class="social__item whatsapp"><a class="social__link" href="#"><img
+                    src="img/whatsapp.svg">WhatsApp<span>Написать в
+                    мессенджер</span></a></li>
+              <li class="social__item telegram"><a class="social__link" href="#"><img
+                    src="img/telegram.svg">Telegram<span>Написать в
+                    мессенджер</span></a></li>
+              <li class="social__item phone"><a class="social__link" href="tel:+74232919990">+7 (423) 291-99-90<span>Без
+                    выходных · с 10:00 до 19:00</span></a></li>
             </ul>
           </div>
         </div>
-        <div class="header__row-bottom">
+        <div class="header__row row-bottom">
           <ul class="header__helpful-links helpful-links__list">
             <li class="helpful-links__item">Каталог ЖК</li>
             <li class="helpful-links__item">Ипотечный калькулятор</li>
@@ -44,6 +52,7 @@
       </nav>
     </div>
   </header>
+
   <!-- Главный экран -->
   <section id="intro">
     <div class="container">
@@ -184,7 +193,7 @@
   <!-- Банки-партнёры -->
   <section id="banks">
     <div class="container">
-      <img class="banks__image" src="img/phone-dialog.png" alt="Логотипы банков">
+      <img class="banks__image" src="img/banks.png" alt="Логотипы банков">
       <div class="banks__info">
         <h2 banks__title>Банки-партнёры</h2>
         <p><b>Сотрудничаем почти со всеми банками Владивостока.</b> Среди них такие, как: Сбербанк, ВТБ, АТБ, Банк
@@ -251,7 +260,12 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- <div id="preloader">
+    <div id="loader"></div>
+  </div> -->
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

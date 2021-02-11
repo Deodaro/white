@@ -1,0 +1,262 @@
+/* colors */
+/* 212121 dark grey (black) */
+/* 757575 light grey */
+/* E0E0E0 another grey */
+/* 4339F2 blue */
+
+@import url('fonts.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Museo Sans';
+  font-size: 20px;
+  font-weight: 300;
+  color: #757575;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+}
+
+/* b {
+  font-weight: 700;
+} */
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Stem';
+  color: #212121;
+}
+
+ul {
+  list-style: none;
+}
+
+/* #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0f1215;
+  z-index: 9999999;
+  height: 100%;
+  width: 100%;
+} */
+
+#intro {
+  background: #212121 url(../img/intro-background1.png) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 720px;
+  /* выравнивание по вертикали с динамической высотой */
+  display: table;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 5;
+  /* background: transparent; */
+  /* TODO уточнить */
+  transition: all 0.3s ease-in-out;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1728px;
+  padding: 0 65px;
+}
+.header-nav {
+  background-color: #fff;
+  border-radius: 24px;
+}
+.header__row {
+  display: block;
+}
+.row-top {
+  display: flex;
+  justify-content: space-between;
+  background-color: yellow;
+}
+.row-bottom {
+  background-color: lightgreen;
+}
+.header__logo {
+}
+.logo {
+}
+.header__social {
+  /* display: flex; */
+}
+.social {
+}
+.social__list {
+  display: flex;
+  justify-content: space-between;
+}
+.social__item {
+}
+.social__item span {
+  display: block;
+  font-size: 16px;
+  color: #757575;
+}
+.instagram {
+}
+.social__link {
+}
+.whatsapp {
+}
+.telegram {
+}
+.phone {
+}
+.row-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.header__helpful-links,
+.header__contact-links {
+  display: flex;
+  justify-content: space-between;
+}
+.helpful-links__list {
+}
+.helpful-links__item {
+}
+/* .header__contact-links {
+} */
+.contact-links__list {
+}
+.contact-links__item {
+}
+.intro__info {
+}
+.wrapper-left {
+}
+.intro__links {
+}
+.intro__link {
+}
+.catalog-link {
+}
+.parameters-link {
+}
+.dark-link {
+  display: inline-block;
+  color: #fff;
+  background-color: #4339f2;
+}
+.intro__chat {
+}
+.about__info {
+}
+.about__image {
+}
+.catalog__cards {
+}
+.card {
+}
+.light-link {
+}
+.catalog__desctiption {
+}
+.catalog__phone {
+}
+.catalog__contacts {
+}
+.advantages__wrapper {
+  background-color: #212121;
+  border-radius: 20px;
+}
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages__item {
+}
+.advantages__item h3 {
+  color: #fff;
+}
+.advantages__item p {
+  color: E0E0E0;
+}
+.apartment-parameters__info {
+}
+.apartment-parameters__title {
+}
+.apartment-parameters__phone {
+}
+/* TODO как правильно оформить .visually-hidden? */
+.visually-hidden {
+  display: none;
+}
+/* #banks {
+} */
+.banks__image {
+}
+.banks__info {
+}
+.developers__title {
+}
+.footer-nav {
+}
+.footer__logo {
+}
+.footer__links {
+}
+.links {
+}
+.links__list {
+}
+.links__item {
+}
+.footer__social {
+}
+.messenger {
+}
+.email {
+}
+.copyright {
+}
+.copyright-link {
+}
+
+/* small screens */
+@media screen and (max-width: 1024px) {
+}
+
+/* tablets */
+
+@media screen and (max-width: 768px) {
+}
+
+/* large mobile devices */
+
+@media screen and (max-width: 600px) {
+}
+
+/* small mobile devices */
+
+@media screen and (max-width: 400px) {
+}

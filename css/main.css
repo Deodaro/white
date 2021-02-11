@@ -1,3 +1,5 @@
+/* TODO причесать порядок свойств*/
+
 /* colors */
 /* 212121 dark grey (black) */
 /* 757575 light grey */
@@ -15,38 +17,43 @@ html {
   font-family: 'Museo Sans';
   font-size: 20px;
   font-weight: 300;
+  line-height: 34px;
   color: #757575;
   box-sizing: border-box;
 }
-
 html,
 body {
   height: 100%;
 }
-
 body {
 }
-
-/* b {
-  font-weight: 700;
-} */
-
-a,
-a:visited {
+b {
+}
+a {
+  font-family: 'AvertaCY';
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
   text-decoration: none;
 }
-
 h1,
 h2,
 h3 {
   font-family: 'Stem';
+}
+h1 {
+  max-width: 649px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 70px;
+}
+h2,
+h3 {
   color: #212121;
 }
-
 ul {
   list-style: none;
 }
-
 /* #preloader {
   position: fixed;
   top: 0;
@@ -58,7 +65,6 @@ ul {
   height: 100%;
   width: 100%;
 } */
-
 #intro {
   background: #212121 url(../img/intro-background1.png) no-repeat center;
   background-size: cover;
@@ -69,7 +75,6 @@ ul {
   display: table;
   position: relative;
 }
-
 header {
   width: 100%;
   position: absolute;
@@ -82,11 +87,14 @@ header {
 }
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  /* width: 1728px; */
   max-width: 1728px;
   padding: 0 65px;
 }
 .header-nav {
+  width: 100%;
+  padding: 50px 48px;
   background-color: #fff;
   border-radius: 24px;
 }
@@ -102,6 +110,7 @@ header {
   background-color: lightgreen;
 }
 .header__logo {
+  width: 203px;
 }
 .logo {
 }
@@ -115,21 +124,31 @@ header {
   justify-content: space-between;
 }
 .social__item {
+  margin-right: 48px;
 }
+.social__item:last-child {
+  margin-right: 0;
+}
+/* TODO  при наведении на ссылку иконка отбрасывает тень. См .social__icon:hover ниже */
+/* .social__item:hover {
+} */
 .social__item span {
   display: block;
   font-size: 16px;
   color: #757575;
 }
-.instagram {
-}
 .social__link {
+  display: flex;
 }
-.whatsapp {
+.social__link:hover {
 }
-.telegram {
+.social__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
 }
-.phone {
+.social__icon:hover {
+  box-shadow: 0 5px 5px 0 #e0e0e0;
 }
 .row-bottom {
   display: flex;
@@ -150,7 +169,19 @@ header {
 }
 .contact-links__item {
 }
+/* TODO padding */
+.intro-wrapper {
+  padding-top: 200px;
+}
+/* #intro {
+  display: flex;
+  align-items: center;
+} */
 .intro__info {
+  color: #fff;
+}
+.intro__info p {
+  max-width: 555px;
 }
 .wrapper-left {
 }
@@ -162,10 +193,31 @@ header {
 }
 .parameters-link {
 }
+.block-link {
+  padding: 17px 45px;
+  border-radius: 12px;
+}
 .dark-link {
+  position: relative;
   display: inline-block;
+  /* display: flex; */
   color: #fff;
   background-color: #4339f2;
+}
+.dark-link::before {
+  content: '';
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  right: 14px;
+  top: 16px;
+  background: url(../img/arrow-right.svg) no-repeat center;
+}
+.light-link {
+  outline: 1px solid #fff;
+  color: #fff;
+  /* border-radius: 12px; */
+  /* outline-offset: -1px; */
 }
 .intro__chat {
 }

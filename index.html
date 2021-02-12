@@ -127,7 +127,7 @@
           <b>Бесплатно покажем квартиру</b>. <b>Поможем оформить бумаги и ипотеку</b>. После чего отдадим ключи вам в
           руки.
         </p>
-        <a class="dark-link" href="#">Ответы на вопросы</a>
+        <a class="about__link block-link dark-link" href="#">Ответы на вопросы</a>
       </div>
       <img class="about__image" src="img/phone-dialog.png" alt="Экран телефона с диалогом">
     </div>
@@ -137,26 +137,26 @@
   <section id="apartment-calalog">
     <div class="container">
       <div class="catalog__cards">
-        <div class="card">
-          <h3>Выбрать новостройку</h3>
+        <div class="card card-left">
+          <h3 class="card__title">Выбрать новостройку</h3>
           <p>Если вы приблизительно знаете, какую квартиру хотите и какую сумму готовы выделить на покупку</p>
-          <a href="#" class="light-link">Выбрать</a>
+          <a href="#" class="block-link light-link">Выбрать</a>
         </div>
-        <div class="card">
-          <h3>Подобрать квартиру</h3>
+        <div class="card card-right card--active">
+          <h3 class="card__title">Подобрать квартиру</h3>
           <p>Если вам сложно определиться что вы хотите. Мы соориентируем вас по цене и другим деталям</p>
-          <a href="#" class="dark-link">Подобрать</a>
+          <a href="#" class="block-link dark-link">Подобрать</a>
         </div>
       </div>
       <div class="catalog__desctiption">
-        <h2 catalog__title>Квартиры в новостройках для каждого</h2>
+        <h2 class="catalog__title">Квартиры в новостройках для каждого</h2>
         <p><b>Дешёвый, средний и премиум сегмент.</b></p>
         <p>Продаём квартиры для всех. Поможем подобрать квартиру мечты для молодых пар, семей с детьми, военнослужащих.
           Подберём студию с хорошим видом для одиночного проживания.</p>
         <p><b>Любые квартиры в новостройках Владивостока в одном месте.</b></p>
-        <div class="">
+        <div class="catalog__links">
           <a class="catalog__phone" href="tel:+74232605030">+7 (423) 260-50-30</a>
-          <a class="catalog__contacts" href="#">Контакты</a>
+          <a class="catalog__contacts" href="#">Контакты <img src="img/arrow-right-dark.svg"></a>
         </div>
       </div>
     </div>
@@ -167,7 +167,7 @@
     <div class="container">
       <!-- черный блок -->
       <div class="advantages__wrapper">
-        <ul class="advantages__list">
+        <!-- <ul class="advantages__list">
           <li class="advantages__item">
             <h3>Официальные представители банков</h3>
             <p>Мы общаемся напрямую с руководителями ипотечных кредитов, что позволяет нам в короткий промежуток время
@@ -182,20 +182,43 @@
             <h3>Бесплатное бронирование</h3>
             <p>Забронируем для вас квартиру абсолютно бесплатно и сохраним её стоимость до выхода на сделку.</p>
           </li>
-        </ul>
+        </ul> -->
+        <div class="advantages__item">
+          <div class="advantages__text">
+            <h3>Официальные представители банков</h3>
+            <p>Мы общаемся напрямую с руководителями ипотечных кредитов, что позволяет нам в короткий промежуток время
+              получить положительный ответ.</p>
+          </div>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__text">
+            <h3>Почему мы не берём комиссию</h3>
+            <p>Действуем от имени застройщиков и являемся их официальными представителями. Мы не риелторы. У нас нет
+              скрытых платежей и комиссий.</p>
+          </div>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__text">
+            <h3>Бесплатное бронирование</h3>
+            <p>Забронируем для вас квартиру абсолютно бесплатно и сохраним её стоимость до выхода на сделку.</p>
+          </div>
+        </div>
       </div>
-    </div>
   </section>
 
   <!-- Подбор квартиры по параметрам -->
   <section id="apartment-parameters">
     <div class="container">
-      <div class="apartment-parameters__info wrapper-left">
-        <h2 class="apartment-parameters__info apartment-parameters__title">Свыше 5740 квартир на выбор</h2>
+      <div class="parameters__info wrapper-left">
+        <h2 class="parameters__info parameters__title">Свыше 5740 квартир на выбор</h2>
         <p>Все новостройки Владивостока. Более 5740 вариантов квартир под любой бюджет и запрос. Заполните поля справа,
           чтобы узнать, какие квартиры могут идеально подойти вам.</p>
-        <a class="apartment-parameters__phone" href="tel:+74232605030">+7 (423) 260-50-30<span>Позвоните нам и мы всё
-            расскажем</span></a>
+        <a class="parameters__phone" href="tel:+74232605030">
+          <h3>
+            +7 (423) 260-50-30<br>
+          </h3>
+          <span>Позвоните нам и мы всё расскажем</span>
+        </a>
       </div>
       <!-- TODO заполнить атрибуты формы -->
       <form action="" method="">

@@ -21,15 +21,24 @@ html {
   color: #757575;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
 }
-body {
+
+/* body {
+} */
+
+p {
+  margin-top: 16px;
 }
+
 b {
   font-weight: 500;
+  color: #212121;
 }
+
 a {
   font-family: 'AvertaCY';
   font-size: 18px;
@@ -38,21 +47,38 @@ a {
   text-decoration: none;
   color: #757575;
 }
+
+/* TODO переорганизовать стили заголовков */
 h1,
 h2,
 h3 {
   font-family: 'Stem';
 }
+
 h1 {
   max-width: 649px;
   font-size: 60px;
   font-weight: 700;
   line-height: 70px;
 }
+
 h2,
 h3 {
   color: #212121;
 }
+
+h2 {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
 ul {
   list-style: none;
 }
@@ -78,31 +104,43 @@ header {
   /* TODO уточнить */
   transition: all 0.3s ease-in-out;
 }
+
 .container {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
   /* width: 1728px; */
   max-width: 1728px;
   padding: 0 65px;
 }
+
+/* TODO правильно оформить .visually-hidden */
+.visually-hidden {
+  display: none;
+}
+
 .header-nav {
   width: 100%;
   padding: 50px 48px 44px 48px;
   background-color: #fff;
   border-radius: 24px;
 }
+
 .header__row {
   display: block;
 }
+
 .row-top {
   display: flex;
   justify-content: space-between;
   /* background-color: yellow; */
 }
+
 .row-bottom {
   /* background-color: lightgreen; */
 }
+
 .header__logo {
   width: 203px;
 }
@@ -202,8 +240,10 @@ header {
   margin-bottom: 20px;
 } */
 .intro__info p {
-  margin-top: 16px;
   max-width: 555px;
+}
+.intro__info b {
+  color: #fff;
 }
 .intro__chat {
   align-self: flex-end;
@@ -229,6 +269,7 @@ header {
 .block-link {
   padding: 17px 45px;
   border-radius: 12px;
+  display: inline-block;
 }
 .dark-link {
   position: relative;
@@ -246,6 +287,7 @@ header {
   top: 16px;
   background: url(../img/arrow-right.svg) no-repeat center;
 }
+
 .light-link {
   padding: 16px 44px;
   border: 1px solid #fff;
@@ -254,48 +296,203 @@ header {
   /* outline-offset: -1px; */
 }
 
-.about__info {
+#about {
+  padding-top: 83px;
+  background-color: lightskyblue;
 }
+
+.about__info {
+  max-width: 570px;
+}
+
+.about__link {
+  margin-top: 44px;
+}
+
 .about__image {
 }
+
+#apartment-calalog {
+  padding-top: 159px;
+  padding-bottom: 161px;
+  background-color: lightyellow;
+}
+
 .catalog__cards {
+  display: flex;
 }
+
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 401px;
+  /* max-height: 495px; */
+  border-radius: 12px;
+  padding: 216px 50px 48px;
+  /* TODO убрать */
+  background-color: #fff;
 }
-.light-link {
+
+.card:first-child {
+  margin-right: 34px;
 }
+
+.card .block-link {
+  max-width: 298px;
+  margin-top: 41px;
+}
+
+.card .light-link {
+  color: #212121;
+  border-color: #e0e0e0;
+}
+
+.card--active {
+  box-shadow: 0 0 30px #e0e0e0;
+}
+
+.card__title {
+  position: relative;
+}
+
+.card__title::before {
+  content: '';
+  position: absolute;
+  top: -168px;
+  width: 120px;
+  height: 120px;
+}
+
+.card-left .card__title::before {
+  background: url(../img/card-icon-1.svg) no-repeat center;
+}
+
+.card-right .card__title::before {
+  background: url(../img/card-icon-2.svg) no-repeat center;
+}
+
 .catalog__desctiption {
+  max-width: 504px;
 }
-.catalog__phone {
-}
-.catalog__contacts {
-}
-.advantages__wrapper {
-  background-color: #212121;
-  border-radius: 20px;
-}
-.advantages__list {
+
+.catalog__links {
+  min-width: ;
   display: flex;
   justify-content: space-between;
+  padding-top: 39px;
 }
+
+.catalog__links a {
+  margin-right: 63px;
+  color: #4339f2;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.catalog__phone {
+}
+
+.catalog__contacts {
+}
+
+#advantages {
+}
+
+.advantages__wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #212121;
+  padding: 85px 64px;
+  border-radius: 20px;
+}
+
+/* .advantages__list {
+  display: flex;
+  justify-content: space-between;
+} */
+
 .advantages__item {
+  position: relative;
+  max-width: 33%;
+  /* padding-left: 64px; */
+  margin-right: 120px;
 }
+
+.advantages__item:last-child {
+  margin-right: 0;
+}
+
+.advantages__text {
+  /* padding-left: 64px; */
+}
+
+.advantages__text::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 64px;
+  height: 64px;
+}
+
+.advantages__text:nth-child(1)::before {
+  background: url(../img/advantages-icon-1.svg);
+}
+
+.advantages__text:nth-child(2)::before {
+  background: url(../img/advantages-icon-2.svg);
+}
+
+.advantages__text:nth-child(3)::before {
+  background: url(../img/advantages-icon-3.svg);
+}
+
 .advantages__item h3 {
   color: #fff;
 }
+
 .advantages__item p {
   color: E0E0E0;
 }
-.apartment-parameters__info {
+
+#apartment-parameters {
+  padding-top: 200px;
 }
-.apartment-parameters__title {
+
+.parameters__info {
+  max-width: 544px;
 }
-.apartment-parameters__phone {
+
+.parameters__info p {
+  padding-bottom: 44px;
 }
-/* TODO как правильно оформить .visually-hidden? */
-.visually-hidden {
-  display: none;
+
+.aparameters__title {
 }
+
+.parameters__phone {
+  position: relative;
+  /* padding-left: 60px; */
+}
+
+/* .parameters__phone span {
+  color: #757575;
+} */
+
+.parameters__phone::before {
+  position: absolute;
+  content: '';
+  width: 48px;
+  height: 48px;
+  background: url(../img/phone2.svg);
+}
+
+form {
+  /* display: flex; */
+  width: 958px;
+  box-shadow: 0 0 30px #e0e0e0;
+}
+
 /* #banks {
 } */
 .banks__image {

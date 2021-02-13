@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>White Development</title>
   <link rel="stylesheet" href="css/main.css">
+  <!-- styles for jScrollPane -->
+  <link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 </head>
 
 <body>
@@ -137,12 +139,12 @@
   <section id="apartment-calalog">
     <div class="container">
       <div class="catalog__cards">
-        <div class="card card-left">
+        <div class="catalog__card card-left">
           <h3 class="card__title">Выбрать новостройку</h3>
           <p>Если вы приблизительно знаете, какую квартиру хотите и какую сумму готовы выделить на покупку</p>
           <a href="#" class="block-link light-link">Выбрать</a>
         </div>
-        <div class="card card-right card--active">
+        <div class="catalog__card catalog__card--active card-right ">
           <h3 class="card__title">Подобрать квартиру</h3>
           <p>Если вам сложно определиться что вы хотите. Мы соориентируем вас по цене и другим деталям</p>
           <a href="#" class="block-link dark-link">Подобрать</a>
@@ -297,51 +299,119 @@
     <div class="container">
       <h2 class="developers__title">Застройщики</h2>
       <p>В тесном сотрудничестве с этими компаниями мы делаем жизнь людей счастливее.</p>
-      <!-- TODO Карусель -->
+      <div class="developers__gallery">
+        <!-- TODO переделать все карточки в ссылки -->
+        <a href="" class="developers__card">
+          <div>
+            <img src="img/developers-icon-1.svg" alt="Лого компании-застройщика">
+            <p>Ренессанс Актив</p>
+          </div>
+        </a>
+        <div class="developers__card">
+          <img src="img/developers-icon-2.svg" alt="Лого компании-застройщика">
+          <a href="">TeamGroup</a>
+        </div>
+        <div class="developers__card">
+          <img src="img/developers-icon-3.svg" alt="Лого компании-застройщика">
+          <a href="">Эко Плюс</a>
+        </div>
+        <div class="developers__card">
+          <img src="img/developers-icon-4.svg" alt="Лого компании-застройщика">
+          <a href="">ИСК Система</a>
+        </div>
+        <div class="developers__card">
+          <img src="img/developers-icon-1.svg" alt="Лого компании-застройщика">
+          <a href="">Ренессанс Актив</a>
+        </div>
+        <div class="developers__card">
+          <img src="img/developers-icon-2.svg" alt="Лого компании-застройщика">
+          <a href="">TeamGroup</a>
+        </div>
+        <div class="developers__card">
+          <img src="img/developers-icon-3.svg" alt="Лого компании-застройщика">
+          <a href="">Эко Плюс</a>
+        </div>
+        <div class="developers__card">
+          <img src="img/developers-icon-4.svg" alt="Лого компании-застройщика">
+          <a href="">ИСК Система</a>
+        </div>
+      </div>
       <div>
       </div>
     </div>
   </section>
 
   <footer>
+    <div class="footer__wrapper">
+      <div class="container">
+        <nav class="footer-nav">
+          <div class="footer__logo column">
+            <a href="#" class="footer__logo logo"><img src="img/logo.svg" alt="Логотип сайта"></a>
+            <p>Консультация и продажа квартир<br>в новостройках Владивостока</p>
+          </div>
+
+          <div class="footer__links column">
+            <ul class="links__list">
+              <li class="links__item"><a href="#">О нас</a></li>
+              <li class="links__item"><a href="#">Каталог ЖК</a></li>
+              <li class="links__item"><a href="#">Ипотечный калькулятор</a></li>
+              <li class="links__item"><a href="#">Ответы на вопросы</a></li>
+            </ul>
+            <ul class="links__list">
+              <li class="links__item"><a href="#">Контакты</a></li>
+              <li class="links__item"><a href="#">Обратная связь</a></li>
+              <li class="links__item"><a href="#">Мы на YouTube</a></li>
+              <li class="links__item"><a href="#">Конфиденциальность</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__social column">
+            <div class="wrapper">
+              <ul class="social__list">
+                <li class="social__item phone">
+                  <a class="social__link" href="tel:+74232919990">
+                    <img class="social__icon" src="img/phone.svg">
+                    <p>+7 (423) 291-99-90<br>
+                      <span>Без выходных · с 10:00 до 19:00</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="social__item messenger">
+                  <a class="social__link" href="#">
+                    <img class="social__icon" src="img/telegram.svg">
+                    <p>WhatsApp / Telegram<br>
+                      <span>Написать в мессенджеры</span>
+                    </p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="social__list">
+                <li class="social__item email">
+                  <a class="social__link" href="mailto:whitedevelopment@mail.ru">
+                    <img class="social__icon" src="img/mail.svg">
+                    <p>whitedevelopment@mail.ru<br>
+                      <span>Email для всех запросов</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="social__item instagram">
+                  <a class="social__link" href="#">
+                    <img class="social__icon" src="img/instagram.svg">
+                    <p>Instagram<br>
+                      <span>Перейти в профиль</span>
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
     <div class="container">
-      <nav class="footer-nav">
-        <a href="#" class="footer__logo logo"><img src="img/logo.svg" alt="Логотип сайта"></a>
-        <p>Консультация и продажа квартир в новостройках Владивостока</p>
-        <div class="footer__links links">
-          <ul class="links__list">
-            <li class="links__item"><a href="#">О нас</a></li>
-            <li class="links__item"><a href="#">Каталог ЖК</a></li>
-            <li class="links__item"><a href="#">Ипотечный калькулятор</a></li>
-            <li class="links__item"><a href="#">Ответы на вопросы</a></li>
-          </ul>
-          <ul class="links__list">
-            <li class="links__item"><a href="#">Контакты</a></li>
-            <li class="links__item"><a href="#">Обратная связь</a></li>
-            <li class="links__item"><a href="#">Мы на YouTube</a></li>
-            <li class="links__item"><a href="#">Конфиденциальность</a></li>
-          </ul>
-        </div>
-        <div class="footer__social social">
-          <ul class="social__list">
-            <li class="social__item phone">
-              <a class="social__link" href="tel:+74232919990">+7 (423)
-                291-99-90</a><span>Без выходных · с 10:00 до 19:00</span>
-            </li>
-            <li class="social__item messenger">
-              <a class="social__link" href="#">WhatsApp / Telegram<span>Написать в
-                  мессенджеры</span></a>
-            </li>
-            <li class="social__item email">
-              <a class="social__link" href="mailto:whitedevelopment@mail.ru">whitedevelopment@mail.ru<span>Email для
-                  всех запросов</span></a>
-            </li>
-            <li class="social__item instagram"><a class="social__link" href="#">Instagram<span>Перейти в
-                  профиль</span></a></li>
-          </ul>
-        </div>
-      </nav>
-      <p class="copyright">Сделано с <img src="img/heart.svg"> в <a class="copyright-link" href="#">#айтуми</a></p>
+      <a class="copyright" href="https://itome.online/" target="_blank">
+        Сделано с <img class="footer__icon" src="img/heart.svg"> в #айтуми
+      </a>
     </div>
   </footer>
 
@@ -350,6 +420,10 @@
   </div> -->
 
   <script src="js/jquery-3.5.1.min.js"></script>
+  <!-- the mousewheel plugin (for jScrollPane) -->
+  <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+  <!-- the jScrollPane script -->
+  <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

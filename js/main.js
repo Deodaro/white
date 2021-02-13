@@ -1,9 +1,13 @@
-// $(document).ready(function(){
-//   $("p").click(function(){
-//     $(this).hide();
-//   });
-// });
+// --- for scroll --- //
+// jquery.jscrollpane.css
+// jquery.mousewheel.js
+// mwheelIntent.js - not included
+// jquery.jscrollpane.min.js
 
-$(document).ready(function () {
-  console.log('Ready!');
+$(function () {
+  $('.developers__gallery').jScrollPane();
 });
+
+// $(function () {
+//   $('.developers__carousel').jScrollPane();
+// });

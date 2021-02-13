@@ -1,5 +1,7 @@
 /* TODO причесать порядок свойств*/
 /* TODO добавить ховер ссылкам-кнопкам*/
+/* TODO удалить неиспользуемые классы */
+/* TODO cursor: pointer */
 
 /* colors */
 /* 212121 dark grey (black) */
@@ -48,6 +50,12 @@ a {
   font-weight: 100;
   text-decoration: none;
   color: #757575;
+}
+
+/* возможно */
+a:hover {
+  /* color: #212121; */
+  /* color: #4339f2; */
 }
 
 /* TODO переорганизовать стили заголовков */
@@ -107,6 +115,10 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
+/* header a:hover {
+  color: #4339f2;
+} */
+
 .container {
   display: flex;
   /* justify-content: center; */
@@ -115,6 +127,15 @@ header {
   /* width: 1728px; */
   max-width: 1728px;
   padding: 0 65px;
+  margin: 0 auto;
+  /* временно */
+  /* border: 1px solid black; */
+}
+
+section {
+  /* временно */
+  /* outline: 1px solid blue;
+  outline-offset: -1px; */
 }
 
 /* TODO правильно оформить .visually-hidden */
@@ -146,74 +167,97 @@ header {
 .header__logo {
   width: 203px;
 }
+
 .logo {
 }
+
 .header__social {
   /* display: flex; */
 }
+
 .social {
 }
+
 .social__list {
   display: flex;
   justify-content: space-between;
 }
+
 .social__item {
   margin-right: 48px;
 }
+
 .social__item:last-child {
   margin-right: 0;
 }
+
 /* TODO  при наведении на ссылку иконка отбрасывает тень. См .social__icon:hover ниже */
-/* .social__item:hover {
-} */
+/* .social__item:hover 
+/* цвет текста менятся на синий? */
+
 .social__item span {
   display: block;
   font-size: 16px;
   color: #757575;
 }
+
 .social__link {
   display: flex;
   align-items: center;
 }
+
 .social__link p {
   margin-left: 18px;
   color: #212121;
 }
 /* .social__link span {
 } */
-.social__link:hover {
-}
+
+/* .social__link:hover {
+  color: #4339f2;
+} */
+
 .social__icon {
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
+
 .social__icon:hover {
   box-shadow: 0 5px 5px 0 #e0e0e0;
 }
+
 .row-bottom {
   display: flex;
   justify-content: space-between;
   margin-top: 45px;
 }
+
 .header__nav-links,
 .header__contact-links {
   display: flex;
   justify-content: space-between;
 }
+
 .nav__list {
   width: 705px;
   /* background-color: lightpink; */
 }
-.nav__item {
-}
+
+/* .nav__item a:hover {
+  color: #4339f2;
+} */
+
 /* .header__contact-links {
 } */
+
 .contact__list {
   width: 404px;
 }
+
 .contact__item {
 }
+
 #intro {
   background: #212121 url(../img/intro-background1.png) no-repeat center;
   background-size: cover;
@@ -224,10 +268,12 @@ header {
   display: table;
   position: relative;
 }
+
 #intro .container {
   height: 100%;
   align-items: flex-end;
 }
+
 .intro-wrapper {
   width: 100%;
   display: flex;
@@ -235,44 +281,62 @@ header {
   /* align-items: flex-end; */
   padding-bottom: 109px;
 }
+
 .intro__info {
   color: #fff;
 }
+
 /* .intro__info h1 {
   margin-bottom: 20px;
 } */
+
 .intro__info p {
   max-width: 555px;
 }
+
 .intro__info b {
   color: #fff;
 }
+
 .intro__chat {
   align-self: flex-end;
 }
+
 /* .intro__chat img {
   width: 89px;
   height: 89px;
 } */
+
 .wrapper-left {
 }
+
 .intro__links {
   margin-top: 45px;
 }
+
 .intro__links .dark-link {
   margin-right: 24px;
 }
+
 .intro__link {
 }
+
 .catalog-link {
 }
+
 .parameters-link {
 }
+
 .block-link {
   padding: 17px 45px;
   border-radius: 12px;
   display: inline-block;
 }
+
+/* .block-link:hover {
+  box-shadow: 0 0 30px #e0e0e0;
+} */
+
 .dark-link {
   position: relative;
   display: inline-block;
@@ -280,6 +344,7 @@ header {
   color: #fff;
   background-color: #4339f2;
 }
+
 .dark-link::before {
   content: '';
   width: 27px;
@@ -300,7 +365,6 @@ header {
 
 #about {
   padding-top: 83px;
-  background-color: lightskyblue;
 }
 
 .about__info {
@@ -317,14 +381,13 @@ header {
 #apartment-calalog {
   padding-top: 159px;
   padding-bottom: 161px;
-  background-color: lightyellow;
 }
 
 .catalog__cards {
   display: flex;
 }
 
-.card {
+.catalog__card {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -336,21 +399,21 @@ header {
   background-color: #fff;
 }
 
-.card:first-child {
+.catalog__card:first-child {
   margin-right: 34px;
 }
 
-.card .block-link {
+.catalog__card .block-link {
   max-width: 298px;
   margin-top: 41px;
 }
 
-.card .light-link {
+.catalog__card .light-link {
   color: #212121;
   border-color: #e0e0e0;
 }
 
-.card--active {
+.catalog__card:hover {
   box-shadow: 0 0 30px #e0e0e0;
 }
 
@@ -607,10 +670,10 @@ form .submit-btn::before {
   transform-origin: center;
 }
 
-.motion {
+/* .motion {
   animation-name: motion;
   animation-timing-function: ease-out;
-}
+} */
 
 @keyframes motion {
   0% {
@@ -628,16 +691,141 @@ form .submit-btn::before {
   max-width: 664px;
 }
 
+.banks__info a {
+  padding-right: 84px;
+  margin-top: 34px;
+}
+
+#developers {
+  padding-top: 117px;
+  padding-bottom: 165px;
+}
+
+#developers .container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .developers__title {
 }
 
-.footer-nav {
+/* .developers__carousel { */
+/* width: 100%; */
+/* margin-top: 49px; */
+/* display: flex;
+  flex-wrap: nowrap; */
+/* overflow-x: auto; */
+/* height: 200px;
+  overflow: auto; */
+/* overflow-x: scroll; */
+/* } */
+
+/* .developers__carousel {
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+ */
+
+.developers__gallery {
+  margin-top: 49px;
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+  /* display: flex;
+  flex-wrap: nowrap; */
 }
 
-.footer__logo {
+.jspPane {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.developers__card {
+  padding: 48px 59px 48px 48px;
+  border: 1px solid #e0e0e0;
+  border-radius: 24px;
+  margin: 34px;
+  /* margin-right: 34px;
+  margin-bottom: 60px; */
+  /* временно */
+  min-width: 405px;
+  height: 297px;
+  /* точно нужно? */
+  display: inline-block;
+  position: relative;
+}
+
+.developers__card::before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 9px;
+  height: 16px;
+  background: url(../img/arrow-right-dark.svg);
+}
+
+.developers__card:hover {
+  box-shadow: 0 0 30px #e0e0e0;
+}
+
+.developers__card:last-child {
+  margin-right: 0;
+}
+
+.developers__card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+/* сомнительно */
+.developers__card p,
+.developers__card a {
+  /* display: block; */
+}
+
+.developers__card p {
+  /* position: relative; */
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.footer__wrapper {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* footer .container {
+  flex-direction: column;
+} */
+
+.footer-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo p {
+  /* max-width: 313px; */
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 21px;
 }
 
 .footer__links {
+  display: flex;
 }
 
 .links {
@@ -645,16 +833,35 @@ form .submit-btn::before {
 .links__list {
 }
 .links__item {
+  position: relative;
+  padding-left: 32px;
 }
+
+.links__item::before {
+  position: absolute;
+  content: '';
+  width: 18px;
+  height: 18px;
+  top: 9px;
+  left: 0;
+  background: url(../img/arrow-right-2.svg) no-repeat center;
+}
+
 .footer__social {
 }
 .messenger {
 }
 .email {
 }
+
 .copyright {
+  margin: 44px auto;
+  color: #212121;
 }
-.copyright-link {
+
+.footer__icon {
+  position: relative;
+  top: 5px;
 }
 
 /* small screens */

@@ -488,10 +488,72 @@ header {
 }
 
 form {
-  /* display: flex; */
   width: 958px;
   box-shadow: 0 0 30px #e0e0e0;
 }
+
+.form__wrapper {
+  display: flex; */
+  /* justify-content: center; */
+  /* margin: 0, auto; */
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 47px;
+  padding-right: 16px;
+}
+
+fieldset:last-child {
+  padding-left: 0;
+  padding-right: 81px;
+}
+
+form select,
+form input {
+  /* height: 60px; */
+  margin-bottom: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  max-width: 407px;
+  padding: 16px 21px;
+  outline: none;
+}
+
+form select,
+form input:placeholder-shown {
+  color: #757575;
+  font-family: 'AvertaCY';
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+form .checkbox-label {
+  font-size: 16px;
+}
+
+form input {
+}
+
+/* form .submit-btn {
+  font-family: 'AvertaCY';
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+form .submit-btn::before {
+  content: '';
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  right: 14px;
+  top: 16px;
+  background: url(../img/arrow-right.svg) no-repeat center;
+} */
 
 /* #banks {
 } */

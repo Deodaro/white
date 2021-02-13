@@ -1,9 +1,11 @@
 /* TODO причесать порядок свойств*/
+/* TODO добавить ховер ссылкам-кнопкам*/
 
 /* colors */
 /* 212121 dark grey (black) */
 /* 757575 light grey */
 /* E0E0E0 another grey */
+/* FAFAFA background grey */
 /* 4339F2 blue */
 
 @import url('fonts.css');
@@ -457,6 +459,7 @@ header {
 
 #apartment-parameters {
   padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .parameters__info {
@@ -487,39 +490,45 @@ header {
   background: url(../img/phone2.svg);
 }
 
-form {
+.parameters__form {
   width: 958px;
+  padding: 48px 81px 48px 47px;
   box-shadow: 0 0 30px #e0e0e0;
+  border-radius: 12px;
+}
+
+form {
 }
 
 .form__wrapper {
-  display: flex; */
+  display: flex;
+  padding-top: 34px;
   /* justify-content: center; */
   /* margin: 0, auto; */
 }
 
 fieldset {
-  display: flex;
-  flex-direction: column;
   width: 50%;
-  padding-left: 47px;
-  padding-right: 16px;
-}
-
-fieldset:last-child {
-  padding-left: 0;
-  padding-right: 81px;
+  border: none;
 }
 
 form select,
 form input {
+  /* box-sizing: border-box; */
   /* height: 60px; */
+  width: 100%;
+  /* width: 407px; */
+  padding: 16px 21px;
   margin-bottom: 16px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   max-width: 407px;
-  padding: 16px 21px;
   outline: none;
+}
+
+form input {
+  padding: 17px 21px;
+  width: 365px;
 }
 
 form select,
@@ -529,14 +538,29 @@ form input:placeholder-shown {
   font-weight: 100;
   font-size: 18px;
   line-height: 18px;
+  display: block;
+}
+
+form .checkbox {
+  display: inline-block;
+  width: 20px;
+  /* color: #212121; */
 }
 
 form .checkbox-label {
   font-size: 16px;
 }
 
-form input {
+form .checkbox-label a {
+  font-size: 16px;
+  color: #212121;
+  border-bottom: 1px solid #757575;
 }
+
+/* .form__btn {
+  display: block;
+  max-width: 365px;
+} */
 
 /* form .submit-btn {
   font-family: 'AvertaCY';
@@ -555,20 +579,67 @@ form .submit-btn::before {
   background: url(../img/arrow-right.svg) no-repeat center;
 } */
 
-/* #banks {
-} */
+#banks {
+  background-color: #fafafa;
+}
+
+#banks .container {
+  /* временно */
+  height: 840px;
+}
+
+.banks__stage {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
 .banks__image {
+  transform: translateY(1000px) rotate(9deg);
+  width: 785px;
 }
+
+.stage-box {
+  align-self: flex-end;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+
+.motion {
+  animation-name: motion;
+  animation-timing-function: ease-out;
+}
+
+@keyframes motion {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-800px) translateX(130px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .banks__info {
+  max-width: 664px;
 }
+
 .developers__title {
 }
+
 .footer-nav {
 }
+
 .footer__logo {
 }
+
 .footer__links {
 }
+
 .links {
 }
 .links__list {

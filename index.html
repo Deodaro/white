@@ -222,32 +222,78 @@
       </div>
       <!-- TODO заполнить атрибуты формы -->
       <form action="" method="">
-        <!-- возможно, нужно использовать другой тэг -->
+        <!-- TODO возможно, нужно использовать другой тэг -->
+        <!-- TODO плейсхолдеры для селектов -->
         <legend>Подобрать квартиру</legend>
-        <fieldset>
-          <!-- TODO плейсхолдеры для селектов -->
-          <label class="visually-hidden" for="rooms">Количество комнат</label>
-          <select name="rooms" id="rooms"></select>
-          <label class="visually-hidden" for="area">Площадь</label>
-          <select name="area" id="area"></select>
-          <label class="visually-hidden" for="district">Район</label>
-          <select name="district" id="district"></select>
-          <label class="visually-hidden" for="period"></label>
-          <select name="period" id="period"></select>
-        </fieldset>
-        <fieldset>
-          <label class="visually-hidden" for="price">Стоимость</label>
-          <select name="price" id="price"></select>
-          <label class="visually-hidden" for="fullname">Ваше ФИО</label>
-          <input type="text" name="fullname" id="fullname">
-          <label class="visually-hidden" for="phone">Номер телефона</label>
-          <input type="tel" name="phone" id="phone">
-          <label class="visually-hidden" for="pay-method">Как будете платить?</label>
-          <select name="pay-method" id="pay-method"></select>
-        </fieldset>
-        <label for="consent">Даю согласие на обработку <a href="#">моих данных</a></label>
-        <input type="checkbox" name="consent" id="consent" checked>
-        <input type="submit" value="Подобрать">
+        <div class="form__wrapper">
+          <fieldset>
+            <label class="visually-hidden" for="rooms">Количество комнат</label>
+            <select name="rooms" id="rooms">
+              <option value="" disabled selected>Количество комнат</option>
+            </select>
+            <label class="visually-hidden" for="area">Площадь</label>
+            <select name="area" id="area">
+              <option value="" disabled selected>Площадь</option>
+            </select>
+            <label class="visually-hidden" for="district">Район</label>
+            <select name="district" id="district">
+              <option value="" disabled selected>Район</option>
+            </select>
+            <label class="visually-hidden" for="period">Срок сдачи</label>
+            <select name="pberiod" id="period">
+              <option value="" disabled selected>Срок сдачи</option>
+            </select>
+            <label class="checkbox-label" for="consent">
+              Даю согласие на обработку <a href="#">моих данных</a>
+            </label>
+            <input type="checkbox" name="consent" id="consent" checked>
+          </fieldset>
+          <fieldset>
+            <label class="visually-hidden" for="price">Стоимость</label>
+            <select name="price" id="price"></select>
+            <label class="visually-hidden" for="fullname">Ваше ФИО</label>
+            <input type="text" name="fullname" id="fullname" placeholder="Ваше ФИО">
+            <label class="visually-hidden" for="phone">Номер телефона</label>
+            <input type="tel" name="phone" id="phone" placeholder="Номер телефона">
+            <label class="visually-hidden" for="pay-method">Как будете платить?</label>
+            <select name="pay-method" id="pay-method"></select>
+            <!-- <input class="block-link dark-link submit-btn" type="submit" value="Подобрать"> -->
+            <a class="block-link dark-link">Подобрать</a>
+          </fieldset>
+        </div>
+        <!-- <div class="form__wrapper">
+          <div class="form__row">
+            <label class="visually-hidden" for="rooms">Количество комнат</label>
+            <select name="rooms" id="rooms"></select>
+            <label class="visually-hidden" for="price">Стоимость</label>
+            <select name="price" id="price"></select>
+          </div>
+          <div class="form__row">
+            <label class="visually-hidden" for="area">Площадь</label>
+            <select name="area" id="area"></select>
+            <label class="visually-hidden" for="fullname">Ваше ФИО</label>
+            <input type="text" name="fullname" id="fullname" placeholder="Ваше ФИО">
+          </div>
+          <div class="form__row">
+            <label class="visually-hidden" for="district">Район</label>
+            <select name="district" id="district"></select>
+            <label class="visually-hidden" for="phone">Номер телефона</label>
+            <input type="tel" name="phone" id="phone" placeholder="Номер телефона">
+          </div>
+          <div class="form__row">
+            <label class="visually-hidden" for="period"></label>
+            <select name="pberiod" id="period"></select>
+            <label class="visually-hidden" for="pay-method">Как будете платить?</label>
+            <select name="pay-method" id="pay-method"></select>
+          </div>
+          <div class="form__row">
+            <label class="checkbox-label" for="consent">
+              Даю согласие на обработку <a href="#">моих данных</a>
+            </label>
+            <input type="checkbox" name="consent" id="consent" checked>
+            <input type="submit" value="Подобрать">
+          </div>
+        </div> -->
       </form>
     </div>
   </section>

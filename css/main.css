@@ -18,7 +18,7 @@
 }
 
 html {
-  font-family: 'Museo Sans';
+  font-family: 'Museo Sans', Arial, sans-serif;
   font-size: 20px;
   font-weight: 100;
   line-height: 34px;
@@ -44,7 +44,7 @@ b {
 }
 
 a {
-  font-family: 'AvertaCY';
+  font-family: 'AvertaCY', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 100;
@@ -62,7 +62,7 @@ a:hover {
 h1,
 h2,
 h3 {
-  font-family: 'Stem';
+  font-family: 'Stem', Arial, sans-serif;
 }
 
 h1 {
@@ -121,15 +121,13 @@ header {
 
 .container {
   display: flex;
-  /* justify-content: center; */
   justify-content: space-between;
   align-items: center;
-  /* width: 1728px; */
   max-width: 1728px;
   padding: 0 65px;
   margin: 0 auto;
   /* временно */
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 section {
@@ -339,7 +337,6 @@ section {
 
 .dark-link {
   position: relative;
-  display: inline-block;
   /* display: flex; */
   color: #fff;
   background-color: #4339f2;
@@ -537,20 +534,37 @@ section {
 }
 
 .parameters__phone {
-  position: relative;
-  /* padding-left: 60px; */
 }
 
 /* .parameters__phone span {
   color: #757575;
 } */
 
-.parameters__phone::before {
+.parameters__phone p {
+  position: relative;
+  padding-left: 78px;
+  font-family: 'Stem', Arial, sans-serif;
+  color: #212121;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.parameters__phone p::before {
   position: absolute;
   content: '';
+  left: -3px;
   width: 48px;
   height: 48px;
   background: url(../img/phone2.svg);
+}
+
+.parameters__phone span {
+  font-family: 'Museo Sans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  color: #757575;
 }
 
 .parameters__form {
@@ -578,69 +592,102 @@ fieldset {
 form select,
 form input {
   /* box-sizing: border-box; */
-  /* height: 60px; */
-  width: 100%;
   /* width: 407px; */
+  height: 60px;
+  width: 100%;
   padding: 16px 21px;
   margin-bottom: 16px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   max-width: 407px;
   outline: none;
+  cursor: pointer;
 }
 
 form input {
-  padding: 17px 21px;
+  /* padding: 17px 21px; */
+  padding: 0px 21px;
   width: 365px;
+  height: 58px;
+}
+
+form select {
+  /* padding: 18px 21px; */
+  /* скрытие стелки по-умолчанию */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* кастомная стрелка */
+  background: url(../img/arrowdrop-down.svg) no-repeat center;
+  /* background-position: right 0.7em top 50%, 0 0; */
+  background-position: right 26px top 50%;
 }
 
 form select,
 form input:placeholder-shown {
   color: #757575;
-  font-family: 'AvertaCY';
+  font-family: 'AvertaCY', Arial, sans-serif;
   font-weight: 100;
   font-size: 18px;
   line-height: 18px;
   display: block;
 }
 
-form .checkbox {
-  display: inline-block;
-  width: 20px;
-  /* color: #212121; */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  height: 60px;
 }
 
-form .checkbox-label {
+input[type='checkbox'] {
+  position: relative;
+  display: inline-block;
+  /* margin: 0 34px 0 0; */
+  width: 0px;
+  height: 0px;
+}
+
+/* замена цвета чекбокса через псевдоэлемент */
+input[type='checkbox']:after {
+  position: absolute;
+  top: -3px;
+  /* right: 20px; */
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  display: inline-block;
+  /* visibility: visible; */
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+input[type='checkbox']:checked:after {
+  content: '';
+  background: url(../img/checkbox-checked.svg) no-repeat center;
+}
+
+.checkbox-label {
+  padding-left: 34px;
   font-size: 16px;
 }
 
-form .checkbox-label a {
+.checkbox-label a {
   font-size: 16px;
   color: #212121;
   border-bottom: 1px solid #757575;
 }
 
-/* .form__btn {
-  display: block;
-  max-width: 365px;
-} */
-
-/* form .submit-btn {
+.form__submit {
+  width: 100%;
+  height: 60px;
   font-family: 'AvertaCY';
+  font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 500;
+  color: #fff;
+  background: #4339f2 url(../img/arrow-right.svg) right 30% top 50% no-repeat;
 }
-
-form .submit-btn::before {
-  content: '';
-  width: 27px;
-  height: 27px;
-  position: absolute;
-  right: 14px;
-  top: 16px;
-  background: url(../img/arrow-right.svg) no-repeat center;
-} */
 
 #banks {
   background-color: #fafafa;
@@ -704,39 +751,20 @@ form .submit-btn::before {
 #developers .container {
   flex-direction: column;
   align-items: flex-start;
+  /* шире остальных контейнеров на 30px, чтобы помещалась тень от боковых карточек */
+  width: 1758px;
 }
 
-.developers__title {
+.developers__desctiption {
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid black;
 }
-
-/* .developers__carousel { */
-/* width: 100%; */
-/* margin-top: 49px; */
-/* display: flex;
-  flex-wrap: nowrap; */
-/* overflow-x: auto; */
-/* height: 200px;
-  overflow: auto; */
-/* overflow-x: scroll; */
-/* } */
-
-/* .developers__carousel {
-  width: 100%;
-  height: 200px;
-  overflow: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
- */
 
 .developers__gallery {
-  margin-top: 49px;
   width: 100%;
-  height: 400px;
+  height: 446px;
   overflow: auto;
-  /* display: flex;
-  flex-wrap: nowrap; */
 }
 
 .jspPane {
@@ -745,60 +773,104 @@ form .submit-btn::before {
 }
 
 .developers__card {
-  padding: 48px 59px 48px 48px;
+  margin: 34px;
   border: 1px solid #e0e0e0;
   border-radius: 24px;
-  margin: 34px;
-  /* margin-right: 34px;
-  margin-bottom: 60px; */
-  /* временно */
-  min-width: 405px;
-  height: 297px;
-  /* точно нужно? */
-  display: inline-block;
   position: relative;
-}
-
-.developers__card::before {
-  content: '';
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  width: 9px;
-  height: 16px;
-  background: url(../img/arrow-right-dark.svg);
+  min-width: 406px;
+  min-height: 297px;
+  display: flex;
+  align-items: flex-end;
+  /* padding-bottom: 50px; */
 }
 
 .developers__card:hover {
   box-shadow: 0 0 30px #e0e0e0;
 }
 
+.developers__card:first-child {
+  margin-left: 30px;
+}
+
 .developers__card:last-child {
   margin-right: 0;
 }
 
-.developers__card div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
+.developers__card::before {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  /* background: url(../img/developers-icon-1.svg) no-repeat center; */
+  /* width: 140px;
+  height: 84px; */
 }
 
-/* сомнительно */
-.developers__card p,
-.developers__card a {
-  /* display: block; */
+.developers__card:nth-child(1)::before {
+  background: url(../img/developers-icon-1.svg) no-repeat center;
+  width: 140px;
+  height: 84px;
+}
+
+.developers__card:nth-child(2)::before {
+  background: url(../img/developers-icon-2.svg) no-repeat center;
+  width: 204px;
+  height: 52px;
+}
+
+.developers__card:nth-child(3)::before {
+  background: url(../img/developers-icon-3.svg) no-repeat center;
+  width: 160px;
+  height: 59px;
+}
+
+.developers__card:nth-child(4)::before {
+  background: url(../img/developers-icon-4.svg) no-repeat center;
+  width: 230px;
+  height: 61px;
+}
+
+.developers__card::after {
+  content: '';
+  position: absolute;
+  right: 58px;
+  bottom: 52px;
+  width: 9px;
+  height: 16px;
+  background: url(../img/arrow-right-dark.svg);
 }
 
 .developers__card p {
-  /* position: relative; */
-  font-size: 24px;
+  padding-bottom: 48px;
+  padding-left: 48px;
+  font-size: 28px;
   line-height: 28px;
   font-weight: 500;
   color: #212121;
 }
+
+/* .developers__card {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.developers__card::before {
+  content: '';
+  position: absolute;
+  right: 58px;
+  bottom: 50px;
+  width: 9px;
+  height: 16px;
+  background: url(../img/arrow-right-dark.svg);
+}
+
+.developers__card p {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #212121;
+} */
 
 .footer__wrapper {
   padding-top: 68px;
@@ -824,7 +896,12 @@ form .submit-btn::before {
   margin-top: 21px;
 }
 
-.footer__links {
+/* .column {
+  border: 1px solid red;
+} */
+
+.footer__links,
+.footer__social {
   display: flex;
 }
 
@@ -847,8 +924,16 @@ form .submit-btn::before {
   background: url(../img/arrow-right-2.svg) no-repeat center;
 }
 
-.footer__social {
+.social__list {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
 }
+
+/* .social__item {
+  display: block;
+} */
+
 .messenger {
 }
 .email {

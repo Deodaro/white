@@ -216,10 +216,9 @@
         <p>Все новостройки Владивостока. Более 5740 вариантов квартир под любой бюджет и запрос. Заполните поля справа,
           чтобы узнать, какие квартиры могут идеально подойти вам.</p>
         <a class="parameters__phone" href="tel:+74232605030">
-          <h3>
-            +7 (423) 260-50-30<br>
-          </h3>
-          <span>Позвоните нам и мы всё расскажем</span>
+          <p>+7 (423) 260-50-30<br>
+            <span>Позвоните нам и мы всё расскажем</span>
+          </p>
         </a>
       </div>
       <div class="parameters__form">
@@ -245,11 +244,12 @@
               <select name="pberiod" id="period">
                 <option value="" disabled selected>Срок сдачи</option>
               </select>
-              <input class="checkbox" type="checkbox" name="consent" id="consent" style="background-color: #212121"
-                checked>
-              <label class="checkbox-label" for="consent">
-                Даю согласие на обработку <a href="#">моих данных</a>
-              </label>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="consent" id="consent" checked>
+                <label class="checkbox-label" for="consent">
+                  Даю согласие на обработку <a href="">моих данных</a>
+                </label>
+              </div>
             </fieldset>
             <fieldset>
               <label class="visually-hidden" for="price">Стоимость</label>
@@ -264,8 +264,8 @@
               <select name="pay-method" id="pay-method">
                 <option value="" disabled selected>Как будете платить?</option>
               </select>
-              <!-- <input class="block-link dark-link submit-btn" type="submit" value="Подобрать"> -->
-              <a class="form__btn block-link dark-link">Подобрать</a>
+              <input type="submit" class="form__submit" value="Подобрать">
+
             </fieldset>
           </div>
         </form>
@@ -297,47 +297,37 @@
   <!-- Застройщики -->
   <section id="developers">
     <div class="container">
-      <h2 class="developers__title">Застройщики</h2>
-      <p>В тесном сотрудничестве с этими компаниями мы делаем жизнь людей счастливее.</p>
+      <div class="developers__desctiption">
+        <h2>Застройщики</h2>
+        <p>В тесном сотрудничестве с этими компаниями мы делаем жизнь людей счастливее.</p>
+      </div>
       <div class="developers__gallery">
-        <!-- TODO переделать все карточки в ссылки -->
         <a href="" class="developers__card">
-          <div>
-            <img src="img/developers-icon-1.svg" alt="Лого компании-застройщика">
-            <p>Ренессанс Актив</p>
-          </div>
+          <p>Ренессанс Актив</p>
         </a>
-        <div class="developers__card">
-          <img src="img/developers-icon-2.svg" alt="Лого компании-застройщика">
-          <a href="">TeamGroup</a>
-        </div>
-        <div class="developers__card">
-          <img src="img/developers-icon-3.svg" alt="Лого компании-застройщика">
-          <a href="">Эко Плюс</a>
-        </div>
-        <div class="developers__card">
-          <img src="img/developers-icon-4.svg" alt="Лого компании-застройщика">
-          <a href="">ИСК Система</a>
-        </div>
-        <div class="developers__card">
-          <img src="img/developers-icon-1.svg" alt="Лого компании-застройщика">
-          <a href="">Ренессанс Актив</a>
-        </div>
-        <div class="developers__card">
-          <img src="img/developers-icon-2.svg" alt="Лого компании-застройщика">
-          <a href="">TeamGroup</a>
-        </div>
-        <div class="developers__card">
-          <img src="img/developers-icon-3.svg" alt="Лого компании-застройщика">
-          <a href="">Эко Плюс</a>
-        </div>
-        <div class="developers__card">
-          <img src="img/developers-icon-4.svg" alt="Лого компании-застройщика">
-          <a href="">ИСК Система</a>
-        </div>
+        <a href="" class="developers__card">
+          <p>TeamGroup</p>
+        </a>
+        <a href="" class="developers__card">
+          <p>Эко Плюс</p>
+        </a>
+        <a href="" class="developers__card">
+          <p>ИСК Система</p>
+        </a>
+        <a href="" class="developers__card">
+          <p>Ренессанс Актив</p>
+        </a>
+        <a href="" class="developers__card">
+          <p>TeamGroup</p>
+        </a>
+        <a href="" class="developers__card">
+          <p>Эко Плюс</p>
+        </a>
+        <a href="" class="developers__card">
+          <p>ИСК Система</p>
+        </a>
       </div>
-      <div>
-      </div>
+
     </div>
   </section>
 
@@ -366,44 +356,42 @@
           </div>
 
           <div class="footer__social column">
-            <div class="wrapper">
-              <ul class="social__list">
-                <li class="social__item phone">
-                  <a class="social__link" href="tel:+74232919990">
-                    <img class="social__icon" src="img/phone.svg">
-                    <p>+7 (423) 291-99-90<br>
-                      <span>Без выходных · с 10:00 до 19:00</span>
-                    </p>
-                  </a>
-                </li>
-                <li class="social__item messenger">
-                  <a class="social__link" href="#">
-                    <img class="social__icon" src="img/telegram.svg">
-                    <p>WhatsApp / Telegram<br>
-                      <span>Написать в мессенджеры</span>
-                    </p>
-                  </a>
-                </li>
-              </ul>
-              <ul class="social__list">
-                <li class="social__item email">
-                  <a class="social__link" href="mailto:whitedevelopment@mail.ru">
-                    <img class="social__icon" src="img/mail.svg">
-                    <p>whitedevelopment@mail.ru<br>
-                      <span>Email для всех запросов</span>
-                    </p>
-                  </a>
-                </li>
-                <li class="social__item instagram">
-                  <a class="social__link" href="#">
-                    <img class="social__icon" src="img/instagram.svg">
-                    <p>Instagram<br>
-                      <span>Перейти в профиль</span>
-                    </p>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <ul class="social__list">
+              <li class="social__item phone">
+                <a class="social__link" href="tel:+74232919990">
+                  <img class="social__icon" src="img/phone.svg">
+                  <p>+7 (423) 291-99-90<br>
+                    <span>Без выходных · с 10:00 до 19:00</span>
+                  </p>
+                </a>
+              </li>
+              <li class="social__item messenger">
+                <a class="social__link" href="#">
+                  <img class="social__icon" src="img/telegram.svg">
+                  <p>WhatsApp / Telegram<br>
+                    <span>Написать в мессенджеры</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+            <ul class="social__list">
+              <li class="social__item email">
+                <a class="social__link" href="mailto:whitedevelopment@mail.ru">
+                  <img class="social__icon" src="img/mail.svg">
+                  <p>whitedevelopment@mail.ru<br>
+                    <span>Email для всех запросов</span>
+                  </p>
+                </a>
+              </li>
+              <li class="social__item instagram">
+                <a class="social__link" href="#">
+                  <img class="social__icon" src="img/instagram.svg">
+                  <p>Instagram<br>
+                    <span>Перейти в профиль</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>

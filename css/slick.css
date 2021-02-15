@@ -1,9 +1,10 @@
 /* Slider */
 .slick-slider {
-  width: 100%;
   position: relative;
 
   display: block;
+
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   -webkit-user-select: none;
@@ -50,8 +51,6 @@
   left: 0;
 
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .slick-track:before,
 .slick-track:after {
@@ -72,7 +71,6 @@
 
   height: 100%;
   min-height: 1px;
-  outline: none;
 }
 [dir='rtl'] .slick-slide {
   float: right;

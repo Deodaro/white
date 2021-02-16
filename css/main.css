@@ -444,15 +444,15 @@ header {
   height: 64px;
 }
 
-.advantages__text:nth-child(1)::before {
+.advantages__item:nth-of-type(1) .advantages__text::before {
   background: url(../img/advantages-icon-1.svg);
 }
 
-.advantages__text:nth-child(2)::before {
+.advantages__item:nth-of-type(2) .advantages__text::before {
   background: url(../img/advantages-icon-2.svg);
 }
 
-.advantages__text:nth-child(3)::before {
+.advantages__item:nth-of-type(3) .advantages__text::before {
   background: url(../img/advantages-icon-3.svg);
 }
 
@@ -712,6 +712,9 @@ input[type='checkbox']:checked:after {
   padding-right: 30px;
 }
 
+.developers__desctiption p {
+}
+
 .developers__slider-buttons {
   align-self: flex-end;
 }
@@ -969,6 +972,7 @@ input[type='checkbox']:checked:after {
   .dark-link::after {
     /* width: 20px; */
     /* height: 18px; */
+    top: 14px;
   }
   .light-link {
     padding: 14px 34px;
@@ -991,32 +995,31 @@ input[type='checkbox']:checked:after {
     max-width: 400px;
     margin-right: 50px;
   }
-  .catalog__cards,
   .catalog__desctiption {
-    max-width: 39%;
+    max-width: 44%;
   }
   .catalog__cards {
-    max-width: 60%;
+    max-width: 55%;
   }
   .catalog__card {
     font-size: 16px;
-    padding: 116px 40px 38px;
-    max-width: 49%;
-  }
-  .catalog__card {
+    padding: 130px 20px 20px 20px;
+    width: 50%;
     margin-right: 20px;
+    /* border: 1px solid blue; */
   }
-  .card__title::before {
-    /* TODO поправить */
+  .card-left .card__title::before,
+  .card-right .card__title::before {
+    background-size: contain;
     width: 90px;
     height: 90px;
-    border-radius: 50%;
+    top: -120px;
   }
   .catalog__desctiption {
     font-size: 16px;
   }
   .wrapper-right {
-    margin-right: 0;
+    margin-right: 20px;
   }
   .catalog__links {
     padding-top: 30px;
@@ -1025,27 +1028,30 @@ input[type='checkbox']:checked:after {
     height: 10px;
   }
   .advantages__wrapper {
-    padding: 40px 40px;
+    padding: 40px 34px;
   }
   .advantages__item {
-    padding-left: ;
+    margin-right: 5px;
   }
   .advantages__item h3 {
     font-size: 24px;
+    line-height: 26px;
   }
   .advantages__item p {
     font-size: 16px;
     line-height: 26px;
   }
   .advantages__text {
-    padding-left: 52px;
+    padding-left: 40px;
   }
-  /* TODO поправить */
-  .advantages__text::before {
+  .advantages__item:nth-of-type(1) .advantages__text::before,
+  .advantages__item:nth-of-type(2) .advantages__text::before,
+  .advantages__item:nth-of-type(3) .advantages__text::before {
+    background-size: contain;
     width: 52px;
     height: 52px;
-    background-size: auto;
   }
+
   .wrapper-left {
     margin-left: 0;
   }
@@ -1054,7 +1060,9 @@ input[type='checkbox']:checked:after {
     padding-bottom: 100px;
   }
   .parameters__info {
-    min-width: 39%;
+    /* min-width: 39%; */
+    padding-right: 5%;
+    /* padding-left: 5%; */
   }
   .parameters__info p {
     font-size: 16px;
@@ -1115,6 +1123,71 @@ input[type='checkbox']:checked:after {
     /* margin: 30px; */
   }
   .slide-content p {
+  }
+
+  #banks .container {
+    max-height: 500px;
+  }
+
+  .banks__stage {
+    max-width: 60%;
+  }
+  .banks__image {
+    max-width: 500px;
+    transform: translateY(700px) rotate(9deg);
+  }
+
+  @keyframes motion {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-550px) translateX(92px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .banks__info {
+    max-width: 40%;
+    margin-left: 20px;
+  }
+
+  .banks__info p,
+  .banks__info a {
+    font-size: 16px;
+  }
+  .slick-carousel {
+    margin-top: 0;
+  }
+  #developers {
+    padding-top: 5%;
+  }
+  .developers__desctiption p {
+    max-width: 446px;
+  }
+  .slick-slide {
+    margin: 20px;
+  }
+  .slick-slide:hover {
+    box-shadow: 0 0 15px #e0e0e0;
+  }
+  .slide-content::after {
+    right: 10%;
+    bottom: 23px;
+    width: 9px;
+    height: 16px;
+  }
+  .slide-content a {
+    min-height: 170px;
+  }
+  .slide-content img {
+    max-height: 40px;
+  }
+  .slide-content p {
+    padding-bottom: 20px;
+    font-size: 20px;
   }
 }
 

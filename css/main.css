@@ -19,6 +19,12 @@ body {
   height: 100%;
 }
 
+/* body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+} */
+
 p {
   margin-top: 16px;
 }
@@ -744,7 +750,7 @@ input[type='checkbox']:checked:after {
   bottom: 42px;
   width: 9px;
   height: 16px;
-  background: url(../img/arrow-right-dark.svg);
+  background: url(../img/arrow-right-dark.svg) no-repeat center;
 }
 
 .slide-content a {
@@ -904,120 +910,160 @@ input[type='checkbox']:checked:after {
     font-size: 18px;
     line-height: 30px;
   }
+
   h1 {
     font-size: 46px;
     line-height: 50px;
     padding-bottom: 15px;
   }
+
   h2 {
     font-size: 40px;
     line-height: 46px;
   }
+
   h3 {
     font-size: 20px;
   }
+
   p {
     margin-top: 10px;
     line-height: 26px;
   }
+
   a {
     font-size: 16px;
   }
+
   .container {
+    max-width: 95%;
   }
-  header {
-    /* top: 20%; */
-  }
+
   .header-nav {
     padding: 30px 30px 25px 30px;
     border-radius: 18px;
   }
+
   .header__logo img {
     max-width: 150px;
   }
+
   .social__item {
     margin-right: 10px;
   }
+
   .social__item span {
     font-size: 14px;
   }
+
   .social__link p {
-    /* margin-left: 16px; */
     margin-left: 8px;
   }
+
   .social__icon {
     width: 46px;
     height: 46px;
     border-radius: 50%;
   }
+
   .nav__list {
     max-width: 49%;
   }
+
   .nav__item a,
   .contact__item a {
     font-size: 14px;
   }
+
   .contact__item {
     margin-right: 35px;
   }
+
   .intro-wrapper {
-    padding-bottom: 40px;
+    padding-bottom: 100px;
   }
+
   .intro__info p {
     max-width: 50%;
     margin-top: 20px;
     font-size: 16px;
   }
+
   .intro__chat a img {
     width: 70px;
   }
+
   .block-link {
     padding: 15px 35px;
     border-radius: 10px;
   }
+
   .intro__links .dark-link,
   .about__link {
     max-width: 270px;
   }
+
   .dark-link::after {
-    /* width: 20px; */
-    /* height: 18px; */
     top: 14px;
+    width: 8px;
+    /* width: 24px;
+    height: 24px;
+    background-size: contain; */
+    background-size: contain;
   }
+
+  .catalog__contact::after {
+    width: 7px;
+    background-size: contain;
+  }
+
   .light-link {
     padding: 14px 34px;
   }
+
   #about .container {
-    /* что-то не работает */
-    align-items: flex-start;
+    justify-content: space-around;
   }
+
   .about__info {
-    /* max-width: 49%; */
+    padding-left: 40px;
+    width: 49%;
+    max-width: 400px;
   }
+
   .about__info p {
     font-size: 16px;
     margin-top: 20px;
   }
+
   .about__link {
     margin-top: 30px;
   }
+
   .about__image {
     max-width: 400px;
     margin-right: 50px;
   }
+
   .catalog__desctiption {
     max-width: 44%;
   }
+
   .catalog__cards {
     max-width: 55%;
+    margin-left: 0;
   }
+
   .catalog__card {
-    font-size: 16px;
     padding: 130px 20px 20px 20px;
     width: 50%;
     margin-right: 20px;
-    /* border: 1px solid blue; */
   }
+
+  .catalog__card p {
+    font-size: 16px;
+  }
+
   .card-left .card__title::before,
   .card-right .card__title::before {
     background-size: contain;
@@ -1025,36 +1071,46 @@ input[type='checkbox']:checked:after {
     height: 90px;
     top: -120px;
   }
+
   .catalog__desctiption {
     font-size: 16px;
+    max-width: 40%;
   }
+
   .wrapper-right {
     margin-right: 20px;
   }
+
   .catalog__links {
     padding-top: 30px;
-    /* max-width: 361px; */
   }
+
   .catalog__links img {
     height: 10px;
   }
+
   .advantages__wrapper {
     padding: 40px 34px;
   }
+
   .advantages__item {
     margin-right: 5px;
   }
+
   .advantages__item h3 {
     font-size: 24px;
     line-height: 26px;
   }
+
   .advantages__item p {
     font-size: 16px;
     line-height: 26px;
   }
+
   .advantages__text {
     padding-left: 40px;
   }
+
   .advantages__item:nth-of-type(1) .advantages__text::before,
   .advantages__item:nth-of-type(2) .advantages__text::before,
   .advantages__item:nth-of-type(3) .advantages__text::before {
@@ -1066,40 +1122,51 @@ input[type='checkbox']:checked:after {
   .wrapper-left {
     margin-left: 0;
   }
+
   #apartment-parameters {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+
   .parameters__info {
-    /* min-width: 39%; */
     padding-right: 5%;
-    /* padding-left: 5%; */
+    padding-left: 5%;
+    width: 45%;
   }
+
   .parameters__info p {
     font-size: 16px;
   }
-  .parameters__phone {
-    /* line-height: 20px; */
+
+  .parameters__phone p {
+    padding-left: 45px;
   }
+
+  .parameters__phone p::before {
+    width: 38px;
+    height: 38px;
+    background-size: contain;
+    top: 7px;
+  }
+
   .parameters__phone span {
     font-size: 16px;
   }
+
   .parameters__form {
     max-width: 60%;
     margin-right: 0;
     padding: 20px;
-    /* margin-left: 10px; */
   }
-  .form__wrapper {
-    /* padding-top: 20px; */
-    /* width: 100%; */
-  }
+
   fieldset {
     min-width: 49%;
   }
+
   fieldset:first-child {
     margin-right: 10px;
   }
+
   form select,
   form input {
     height: 50px;
@@ -1110,30 +1177,27 @@ input[type='checkbox']:checked:after {
     font-size: 14px;
   }
 
-  form input {
-    /* TODO убрать */
-    /* box-sizing: border-box;
-    width: 100%; */
-  }
   input[type='checkbox']:after {
     width: 15px;
     height: 15px;
   }
+
   .form__submit {
     font-size: 16px;
+    background-size: 8px;
   }
+
   #developers {
     padding-top: 100px;
   }
+
   .slider-btn img {
     width: 40px;
     height: 40px;
   }
+
   .slick-slide {
     border-radius: 20px;
-    /* margin: 30px; */
-  }
-  .slide-content p {
   }
 
   #banks .container {
@@ -1143,9 +1207,10 @@ input[type='checkbox']:checked:after {
   .banks__stage {
     max-width: 60%;
   }
+
   .banks__image {
-    max-width: 500px;
-    transform: translateY(700px) rotate(9deg);
+    max-width: 700px;
+    transform: translateY(700px) translateX(-175px) rotate(9deg);
   }
 
   @keyframes motion {
@@ -1161,44 +1226,106 @@ input[type='checkbox']:checked:after {
   }
 
   .banks__info {
-    max-width: 40%;
-    margin-left: 20px;
+    max-width: 50%;
+    padding-top: 40px;
   }
 
   .banks__info p,
   .banks__info a {
     font-size: 16px;
   }
+
   .slick-carousel {
-    margin-top: 0;
+    margin-top: 30px;
   }
+
   #developers {
     padding-top: 5%;
+    padding-bottom: 5%;
   }
+
   .developers__desctiption p {
     max-width: 446px;
   }
+
   .slick-slide {
     margin: 20px;
   }
+
   .slick-slide:hover {
     box-shadow: 0 0 15px #e0e0e0;
   }
+
   .slide-content::after {
     right: 10%;
     bottom: 23px;
     width: 9px;
     height: 16px;
   }
+
   .slide-content a {
     min-height: 170px;
   }
+
   .slide-content img {
     max-height: 40px;
   }
+
   .slide-content p {
     padding-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .slide-content::after {
+    width: 7px;
+    height: 17px;
+    background-size: contain;
+  }
+
+  .footer__logo img {
+    max-width: 160px;
+  }
+
+  .footer__logo p {
+    line-height: 26px;
+    font-size: 16px;
+  }
+
+  .links__list:first-child {
+    margin-right: 20px;
+  }
+
+  .links__item {
+    padding: 0px 0px 4px 20px;
+  }
+
+  .links__item::before {
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+  }
+
+  .footer__social {
+    padding-left: 20px;
+  }
+
+  .footer__social-list:first-child {
+    margin-right: 35px;
+  }
+
+  .footer__social-link .phone::before,
+  .footer__social-link .messenger::before,
+  .footer__social-link .email::before,
+  .footer__social-link .instagram::before {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    left: -50px;
+    top: 3px;
+  }
+
+  .copyright {
+    font-size: 16px;
   }
 }
 

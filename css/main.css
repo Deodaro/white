@@ -907,7 +907,7 @@ input[type='checkbox']:checked:after {
 
 @media screen and (max-width: 1280px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
   }
 
@@ -986,7 +986,6 @@ input[type='checkbox']:checked:after {
   .intro__info p {
     max-width: 50%;
     margin-top: 20px;
-    font-size: 16px;
   }
 
   .intro__chat a img {
@@ -1006,9 +1005,6 @@ input[type='checkbox']:checked:after {
   .dark-link::after {
     top: 14px;
     width: 8px;
-    /* width: 24px;
-    height: 24px;
-    background-size: contain; */
     background-size: contain;
   }
 
@@ -1032,7 +1028,6 @@ input[type='checkbox']:checked:after {
   }
 
   .about__info p {
-    font-size: 16px;
     margin-top: 20px;
   }
 
@@ -1331,32 +1326,27 @@ input[type='checkbox']:checked:after {
 
 /* small screens */
 @media screen and (max-width: 1024px) {
-  /* html {
-    font-size: 18px;
-    line-height: 30px;
+  h1 {
+    font-size: 36px;
   }
-  h1,
   h2 {
-    font-size: 40px;
-  }
-  h3 {
-    font-size: 20px;
+    font-size: 34px;
   }
   p {
-    margin-top: 10px;
+    margin-top: 5px;
+    line-height: 22px;
+    font-weight: 100;
   }
   a {
-    font-size: 16px;
-  }
-  .container {
-    width: ;
+    font-size: 14px;
   }
   .header-nav {
-    background: green;
+    padding: 2%;
+    border-radius: 14px;
   }
-  .header__logo img {
-    max-width: 150px;
-  } */
+  .intro-wrapper {
+    padding-bottom: 5%;
+  }
 }
 
 /* tablets */

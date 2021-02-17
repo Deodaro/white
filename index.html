@@ -14,7 +14,6 @@
 <body>
   <header>
     <div class="container">
-      <!-- белая панель -->
       <nav class="header-nav">
         <div class="header__row row-top">
           <div class="header__logo">
@@ -24,7 +23,7 @@
             <ul class="header__social-list">
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <img class="social__icon" src="img/instagram.svg">
+                  <img class="social__icon" src="img/instagram.svg" alt="Иконка Instagram">
                   <p>Instagram<br>
                     <span>Перейти в профиль</span>
                   </p>
@@ -32,7 +31,7 @@
               </li>
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <img class="social__icon" src="img/whatsapp.svg">
+                  <img class="social__icon" src="img/whatsapp.svg" alt="Иконка WhatsApp">
                   <p>WhatsApp<br>
                     <span>Написать в мессенджер</span>
                   </p>
@@ -40,7 +39,7 @@
               </li>
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <img class="social__icon" src="img/telegram.svg">
+                  <img class="social__icon" src="img/telegram.svg" alt="Иконка Telegram">
                   <p>Telegram<br>
                     <span>Написать в мессенджер</span>
                   </p>
@@ -48,7 +47,7 @@
               </li>
               <li class="social__item">
                 <a class="social__link" href="tel:+74232919990">
-                  <img class="social__icon" src="img/phone.svg">
+                  <img class="social__icon" src="img/phone.svg" alt="Иконка Phone">
                   <p>+7
                     (423) 291-99-90<br>
                     <span>Без выходных · с 10:00 до 19:00</span>
@@ -116,7 +115,7 @@
   <section id="about">
     <div class="container">
       <div class="about__info wrapper-left">
-        <h2 about__title>Чем занимаемся</h2>
+        <h2>Чем занимаемся</h2>
         <p>
           Мы <b>официальные представители</b> застройщиков Владивостока. <b>Продаём квартиры</b> в новостройках
           напрямую по ценам застройщиков. <b>Без комиссий и скрытых платежей</b>. В цену квартир уже заложен процент для
@@ -150,14 +149,14 @@
         </div>
       </div>
       <div class="catalog__desctiption wrapper-right">
-        <h2 class="catalog__title">Квартиры в новостройках для каждого</h2>
+        <h2 class="catalog__title">Квартиры<br>в новостройках для каждого</h2>
         <p><b>Дешёвый, средний и премиум сегмент.</b></p>
         <p>Продаём квартиры для всех. Поможем подобрать квартиру мечты для молодых пар, семей с детьми, военнослужащих.
           Подберём студию с хорошим видом для одиночного проживания.</p>
         <p><b>Любые квартиры в новостройках Владивостока в одном месте.</b></p>
         <div class="catalog__links">
-          <a href="tel:+74232605030">+7 (423) 260-50-30</a>
-          <a href="#">Контакты <img src="img/arrow-right-dark.svg"></a>
+          <a class="catalog__phone" href="tel:+74232605030">+7 (423) 260-50-30</a>
+          <a class="catalog__contact" href="#">Контакты</a>
         </div>
       </div>
     </div>
@@ -169,14 +168,14 @@
       <div class="advantages__wrapper">
         <div class="advantages__item">
           <div class="advantages__text">
-            <h3>Официальные представители банков</h3>
+            <h3>Официальные<br>представители банков</h3>
             <p>Мы общаемся напрямую с руководителями ипотечных кредитов, что позволяет нам в короткий промежуток время
               получить положительный ответ.</p>
           </div>
         </div>
         <div class="advantages__item">
           <div class="advantages__text">
-            <h3>Почему мы не берём комиссию</h3>
+            <h3>Почему мы не<br>берём комиссию</h3>
             <p>Действуем от имени застройщиков и являемся их официальными представителями. Мы не риелторы. У нас нет
               скрытых платежей и комиссий.</p>
           </div>
@@ -188,13 +187,14 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
 
   <!-- Подбор квартиры по параметрам -->
   <section id="apartment-parameters">
     <div class="container">
       <div class="parameters__info wrapper-left">
-        <h2 class="parameters__info parameters__title">Свыше 5740<br>квартир на выбор</h2>
+        <h2>Свыше 5740<br>квартир на выбор</h2>
         <p>Все новостройки Владивостока. Более 5740 вариантов квартир под любой бюджет и запрос. Заполните поля справа,
           чтобы узнать, какие квартиры могут идеально подойти вам.</p>
         <a class="parameters__phone" href="tel:+74232605030">
@@ -205,8 +205,7 @@
       </div>
       <div class="parameters__form">
         <h3>Подобрать квартиру</h3>
-        <!-- TODO заполнить атрибуты формы -->
-        <form action="" method="">
+        <form action="URL" method="GET">
           <div class="form__wrapper">
             <fieldset>
               <label class="visually-hidden" for="rooms">Количество комнат</label>
@@ -246,7 +245,6 @@
                 <option value="" disabled selected>Как будете платить?</option>
               </select>
               <input type="submit" class="form__submit" value="Подобрать">
-
             </fieldset>
           </div>
         </form>
@@ -263,8 +261,8 @@
         </div>
       </div>
       <div class="banks__info wrapper-right">
-        <h2 banks__title>Банки-партнёры</h2>
-        <p><b>Сотрудничаем почти со всеми банками Владивостока.</b> Среди них такие, как: Сбербанк, ВТБ, АТБ, Банк
+        <h2>Банки-партнёры</h2>
+        <p><b>Сотрудничаем почти со всеми банками Владивостока.<br></b> Среди них такие, как: Сбербанк, ВТБ, АТБ, Банк
           Приморье,
           Совкомбанк и другие.</p>
         <p>Мы напрямую общаемся с руководителями ипотечных отделов, что позволяет нам <b>помочь в получении льготных
@@ -278,19 +276,21 @@
   <!-- Застройщики -->
   <section id="developers">
     <div class="container">
-      <div class="developers__desctiption">
-        <h2>Застройщики</h2>
-        <p>В тесном сотрудничестве с этими компаниями<br>мы делаем жизнь людей счастливее.</p>
-      </div>
-      <div class="developers__slider-buttons">
-        <button id="slider-prev-btn" class="slider-btn"><img src="img/button-prev.svg"></button>
-        <button id="slider-next-btn" class="slider-btn"><img src="img/button-next.svg"></button>
+      <div class="developers__row-top">
+        <div class="developers__description">
+          <h2>Застройщики</h2>
+          <p>В тесном сотрудничестве с этими компаниями<br>мы делаем жизнь людей счастливее.</p>
+        </div>
+        <div class="developers__slider-buttons">
+          <button id="slider-prev-btn" class="slider-btn"><img src="img/button-prev.svg" alt="Назад"></button>
+          <button id="slider-next-btn" class="slider-btn"><img src="img/button-next.svg" alt="Вперёд"></button>
+        </div>
       </div>
       <div class="slick-carousel">
         <div>
           <div class="slide-content">
             <a href="">
-              <img src="img/developers-icon-1.svg" alt="">
+              <img src="img/developers-icon-1.svg" alt="Логотип застройщика">
               <p>Ренессанс Актив</p>
             </a>
           </div>
@@ -298,7 +298,7 @@
         <div>
           <div class="slide-content">
             <a href="">
-              <img src="img/developers-icon-2.svg" alt="">
+              <img src="img/developers-icon-2.svg" alt="Логотип застройщика">
               <p>TeamGroup</p>
             </a>
           </div>
@@ -306,7 +306,7 @@
         <div>
           <div class="slide-content">
             <a href="">
-              <img src="img/developers-icon-3.svg" alt="">
+              <img src="img/developers-icon-3.svg" alt="Логотип застройщика">
               <p>Эко Плюс</p>
             </a>
           </div>
@@ -314,7 +314,7 @@
         <div>
           <div class="slide-content">
             <a href="">
-              <img src="img/developers-icon-4.svg" alt="">
+              <img src="img/developers-icon-4.svg" alt="Логотип застройщика">
               <p>ИСК Система</p>
             </a>
           </div>
@@ -322,7 +322,7 @@
         <div>
           <div class="slide-content">
             <a href="">
-              <img src="img/developers-icon-1.svg" alt="">
+              <img src="img/developers-icon-1.svg" alt="Логотип застройщика">
               <p>Ренессанс Актив</p>
             </a>
           </div>
@@ -330,7 +330,7 @@
         <div>
           <div class="slide-content">
             <a href="">
-              <img src="img/developers-icon-2.svg" alt="">
+              <img src="img/developers-icon-2.svg" alt="Логотип застройщика">
               <p>TeamGroup</p>
             </a>
           </div>
@@ -338,7 +338,7 @@
         <div>
           <div class="slide-content">
             <a href="">
-              <img src="img/developers-icon-3.svg" alt="">
+              <img src="img/developers-icon-3.svg" alt="Логотип застройщика">
               <p>Эко Плюс</p>
             </a>
           </div>
@@ -346,7 +346,7 @@
         <div>
           <div class="slide-content">
             <a href="">
-              <img src="img/developers-icon-4.svg" alt="">
+              <img src="img/developers-icon-4.svg" alt="Логотип застройщика">
               <p>ИСК Система</p>
             </a>
           </div>
@@ -384,7 +384,7 @@
 
           <div class="footer__social column">
             <ul class="footer__social-list">
-              <li class="social__item">
+              <li class="social__item footer__social-item">
                 <a class="footer__social-link" href="tel:+74232919990">
                   <p class="phone">+7 (423) 291-99-90<br>
                     <span>Без выходных · с 10:00 до 19:00</span>
@@ -421,14 +421,14 @@
     </div>
     <div class="container">
       <a class="copyright" href="https://itome.online/" target="_blank">
-        Сделано с <img class="footer__icon" src="img/heart.svg"> в #айтуми
+        Сделано с <img class="footer__icon" src="img/heart.svg" alt="Иконка-сердечко"> в #айтуми
       </a>
     </div>
   </footer>
 
   <script src="js/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

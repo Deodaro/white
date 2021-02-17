@@ -52,4 +52,12 @@ $('.slick-carousel')
     infinite: false,
     prevArrow: document.querySelector('#slider-prev-btn'),
     nextArrow: document.querySelector('#slider-next-btn'),
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   });

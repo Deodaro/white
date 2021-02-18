@@ -30,9 +30,9 @@ $('.slick-carousel')
     nextArrow: document.querySelector('#slider-next-btn'),
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
     ],

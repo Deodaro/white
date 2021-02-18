@@ -1205,9 +1205,17 @@ input[type='checkbox']:checked + label:before {
     padding-top: 100px;
   }
 
+  #developers .container {
+    width: 90%;
+  }
+
   .slider-btn img {
     width: 40px;
     height: 40px;
+  }
+
+  .slick-carousel {
+    width: 100%;
   }
 
   .slick-slide {
@@ -1307,7 +1315,6 @@ input[type='checkbox']:checked + label:before {
   .footer__logo p {
     line-height: 26px;
     font-size: 16px;
-    /* max-width: 240px; */
   }
 
   .links__list:first-child {
@@ -1348,44 +1355,61 @@ input[type='checkbox']:checked + label:before {
   }
 }
 
-/* small screens */
 @media screen and (max-width: 1024px) {
   h1 {
     font-size: 36px;
   }
+
   h2 {
     font-size: 34px;
   }
+
   h3 {
     font-size: 18px;
   }
+
   p {
     margin-top: 5px;
     line-height: 22px;
     font-weight: 100;
   }
+
   a {
     font-size: 14px;
   }
+
+  header {
+    top: 30px;
+  }
+
   .header-nav {
     padding: 2%;
     border-radius: 14px;
   }
+
   .nav__list {
     max-width: 55%;
   }
+
   .row-bottom {
     margin-top: 0;
   }
+
   .intro-wrapper {
     padding-bottom: 5%;
   }
+
+  .intro__chat a img {
+    width: 50px;
+  }
+
   .catalog__card {
     padding-top: 90px;
     box-sizing: border-box;
     position: relative;
     justify-content: space-between;
   }
+
   .catalog__card::before {
     content: ' ';
     background: url(../img/card-icon-1.svg);
@@ -1395,33 +1419,42 @@ input[type='checkbox']:checked + label:before {
     width: 50px;
     height: 50px;
   }
+
   .card-left::before {
     background: url(../img/card-icon-1.svg) no-repeat center;
     background-size: contain;
   }
+
   .card-right::before {
     background: url(../img/card-icon-2.svg) no-repeat center;
     background-size: contain;
   }
+
   .catalog__card .block-link {
     margin-top: 20%;
   }
+
   .catalog__card p {
     line-height: 22px;
     margin-top: 10%;
   }
+
   .card__title::before {
     display: none;
   }
+
   .advantages__item {
     width: 33%;
   }
+
   .advantages__item h3 {
     font-size: 18px;
   }
+
   .advantages__item p {
     line-height: 22px;
   }
+
   .advantages__item:nth-of-type(1) .advantages__text::before,
   .advantages__item:nth-of-type(2) .advantages__text::before,
   .advantages__item:nth-of-type(3) .advantages__text::before {
@@ -1429,55 +1462,51 @@ input[type='checkbox']:checked + label:before {
     width: 46px;
     height: 46px;
   }
+
   advantages__text {
     padding-left: 34px;
   }
+
   .slick-carousel {
     margin-bottom: 30px;
   }
+
   .slide-content a {
     min-height: 160px;
   }
+
   .slide-content img {
     max-height: 35px;
   }
+
   .slide-content p {
     font-size: 16px;
   }
+
   .footer__wrapper {
     padding-top: 5%;
     padding-bottom: 4%;
   }
+
   .footer-nav {
     align-items: center;
   }
+
   .footer__social {
     flex-direction: column;
   }
+
   .footer__social-list {
     margin-top: 0;
     margin-bottom: 0;
   }
+
   .social__item {
     margin-bottom: 5%;
   }
+
   .copyright {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-}
-
-/* tablets */
-
-@media screen and (max-width: 768px) {
-}
-
-/* large mobile devices */
-
-@media screen and (max-width: 600px) {
-}
-
-/* small mobile devices */
-
-@media screen and (max-width: 400px) {
 }

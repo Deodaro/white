@@ -577,29 +577,6 @@ form input:placeholder-shown {
 input[type='checkbox'] {
   position: relative;
   display: inline-block;
-  width: 0px;
-  height: 0px;
-}
-
-/* замена чекбокса */
-/* input[type='checkbox']:after {
-  position: absolute;
-  top: -3px;
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  display: inline-block;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-}
-
-input[type='checkbox']:checked:after {
-  content: '';
-  background: url(../img/checkbox-checked.svg) no-repeat center;
-} */
-
-input[type='checkbox'] {
   display: none;
 }
 
@@ -922,7 +899,124 @@ input[type='checkbox']:checked + label:before {
   top: 5px;
 }
 
-@media screen and (max-width: 1280px) {
+/* @media screen and (max-width: 1366px) {
+  h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  h2 {
+    font-size: 42px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 18px;
+    line-height: normal;
+  }
+  header {
+    top: 30px;
+  }
+
+  .container {
+    max-width: 97%;
+  }
+
+  .header-nav {
+    padding: 35px 35px 30px 35px;
+  }
+
+  .header__logo img {
+    max-width: 160px;
+  }
+
+  .intro__info p {
+    margin-top: 35px;
+  }
+
+  .intro__links {
+    margin-top: 35px;
+  }
+  .slick-carousel {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .about__image {
+    max-width: 400px;
+    margin-right: 50px;
+  }
+  .catalog__cards {
+    max-width: 55%;
+    margin-left: 0;
+  }
+  .catalog__card {
+    padding: 130px 20px 20px 20px;
+    width: 50%;
+    margin-right: 20px;
+    position: relative;
+  }
+  .catalog__card::before {
+    content: ' ';
+    background: url(../img/card-icon-1.svg);
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .card-left::before {
+    background: url(../img/card-icon-1.svg) no-repeat center;
+    background-size: contain;
+  }
+
+  .card-right::before {
+    background: url(../img/card-icon-2.svg) no-repeat center;
+    background-size: contain;
+  }
+
+  .card__title::before {
+    display: none;
+  }
+  .catalog__description {
+    max-width: 44%;
+  }
+  .wrapper-right {
+    margin-right: 20px;
+  }
+  .advantages__wrapper {
+    padding: 40px 34px;
+  }
+  .advantages__item {
+    margin-right: 5px;
+  }
+  .advantages__item h3 {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  .advantages__item p {
+    /* font-size: 16px; */
+/* line-height: 26px; */
+/* }
+
+  .advantages__text {
+    padding-left: 40px;
+  }
+
+  .advantages__item:nth-of-type(1) .advantages__text::before,
+  .advantages__item:nth-of-type(2) .advantages__text::before,
+  .advantages__item:nth-of-type(3) .advantages__text::before {
+    background-size: contain;
+    width: 52px;
+    height: 52px;
+  }
+  .wrapper-left {
+    margin-left: 10px;
+  }
+} */
+
+@media screen and (max-width: 1366px) {
   html {
     font-size: 16px;
     line-height: 30px;
@@ -930,7 +1024,7 @@ input[type='checkbox']:checked + label:before {
 
   h1 {
     font-size: 42px;
-    line-height: 50px;
+    line-height: normal;
     padding-bottom: 15px;
   }
 
@@ -953,7 +1047,7 @@ input[type='checkbox']:checked + label:before {
   }
 
   .container {
-    max-width: 95%;
+    max-width: 97%;
   }
 
   header {
@@ -1062,13 +1156,9 @@ input[type='checkbox']:checked + label:before {
     margin-right: 50px;
   }
 
-  .catalog__desctiption {
-    max-width: 44%;
-  }
-
   .catalog__cards {
     max-width: 55%;
-    margin-left: 0;
+    margin-left: 5px;
   }
 
   .catalog__card {
@@ -1089,13 +1179,16 @@ input[type='checkbox']:checked + label:before {
     top: -120px;
   }
 
-  .catalog__desctiption {
+  .catalog__description {
     font-size: 16px;
-    max-width: 40%;
+    width: 40%;
+    max-width: 500px;
   }
 
   .wrapper-right {
     margin-right: 20px;
+    padding-left: 30px;
+    box-sizing: border-box;
   }
 
   .catalog__links {
@@ -1172,7 +1265,7 @@ input[type='checkbox']:checked + label:before {
 
   .parameters__form {
     max-width: 60%;
-    margin-right: 0;
+    margin-right: 20px;
     padding: 20px;
   }
 
@@ -1316,7 +1409,7 @@ input[type='checkbox']:checked + label:before {
   }
 
   .links__list:first-child {
-    margin-right: 10px;
+    margin-right: 46px;
   }
 
   .links__item {
@@ -1350,6 +1443,12 @@ input[type='checkbox']:checked + label:before {
 
   .copyright {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .links__list:first-child {
+    margin-right: 12px;
   }
 }
 

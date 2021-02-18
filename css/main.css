@@ -936,7 +936,7 @@ input[type='checkbox']:checked + label:before {
   }
 
   h1 {
-    font-size: 46px;
+    font-size: 42px;
     line-height: 50px;
     padding-bottom: 15px;
   }
@@ -961,6 +961,10 @@ input[type='checkbox']:checked + label:before {
 
   .container {
     max-width: 95%;
+  }
+
+  header {
+    top: 30px;
   }
 
   .header-nav {
@@ -1005,6 +1009,7 @@ input[type='checkbox']:checked + label:before {
 
   .intro-wrapper {
     padding-bottom: 4%;
+    padding-top: 60px;
   }
 
   .intro__info p {

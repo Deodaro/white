@@ -35,9 +35,20 @@ $('.slick-carousel')
           slidesToShow: 3,
         },
       },
+      {
+        breakpoint: 765,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
     ],
   });
 
-addEventListener('click', function () {
-  console.log('You clicked!');
-});
+function myFunction() {
+  var x = document.getElementById('mobMenu');
+  if (x.className === 'mobile-menu') {
+    x.className += ' responsive';
+  } else {
+    x.className = 'mobile-menu';
+  }
+}

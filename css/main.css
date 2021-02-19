@@ -89,7 +89,7 @@ header {
 }
 
 .header-nav {
-  width: 100%;
+  min-width: 100%;
   padding: 48px 48px 44px 48px;
   background-color: #fff;
   border-radius: 24px;
@@ -122,8 +122,6 @@ header {
   display: none;
   overflow: hidden;
   background-color: #fff;
-  /* position: absolute; */
-  /* z-index: 5; */
 }
 
 .mobile-menu a {
@@ -132,7 +130,6 @@ header {
   color: #757575;
   text-align: center;
   padding: 10px 14px;
-  /* font-family: 'AvertaCY', Arial, sans-serif; */
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -514,7 +511,6 @@ header {
 }
 
 .parameters__info p {
-  /* padding-top: 14px; */
   margin-top: 24px;
   padding-bottom: 16px;
   line-height: 30px;
@@ -1409,7 +1405,7 @@ input[type='checkbox']:checked + label:before {
   }
 
   #intro .container {
-    align-items: center;
+    align-items: flex-end;
   }
 
   .intro-wrapper {
@@ -1593,6 +1589,10 @@ input[type='checkbox']:checked + label:before {
     padding-top: 50px;
   }
 
+  .about__info p {
+    line-height: 22px;
+  }
+
   .about__image {
     margin-right: 10px;
     max-width: 300px;
@@ -1700,6 +1700,7 @@ input[type='checkbox']:checked + label:before {
 
   .mobile-menu {
     display: block;
+    border-radius: inherit;
   }
 
   .mobile-menu .logo {
@@ -1877,6 +1878,7 @@ input[type='checkbox']:checked + label:before {
 
   .parameters__info p {
     line-height: 22px;
+    font-size: 14px;
   }
 
   .parameters__phone p::before {
@@ -1964,5 +1966,63 @@ input[type='checkbox']:checked + label:before {
   .footer__links,
   .footer__social-list {
     display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #apartment-catalog {
+    padding-top: 50px;
+  }
+
+  .catalog__description {
+    padding-bottom: 0;
+  }
+
+  .catalog__links {
+    flex-direction: column;
+  }
+
+  .catalog__phone {
+    margin-bottom: 18px;
+  }
+
+  .catalog__contact::after {
+    width: 9px;
+    height: 16px;
+    top: 0;
+    left: 10px;
+  }
+
+  .catalog__cards {
+    display: none;
+  }
+
+  #apartment-parameters {
+    padding-bottom: 50px;
+  }
+
+  .parameters__info p {
+    font-size: 14px;
+  }
+
+  .checkbox-wrapper {
+    position: absolute;
+    bottom: 70px;
+  }
+
+  .form__submit {
+    margin-bottom: 0;
+  }
+
+  .banks__info p {
+    font-size: 14px;
+  }
+
+  .footer__logo p {
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 14px;
   }
 }
